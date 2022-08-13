@@ -14,6 +14,10 @@ module.exports = {
         'prussian-blue': '#001220',
       },
     },
+    gridTemplateColumns: {
+      'nav-layout': 'auto 1fr auto',
+      'nav-layout-2': 'repeat(4, 1fr)', // grid-cols-4 bug on tw
+    },
   },
   plugins: [
     // allows to target children -> className'child:xyz'
