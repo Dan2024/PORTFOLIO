@@ -11,9 +11,15 @@ module.exports = {
         'blue-sapphire': '#236283ff',
         'rich-black': '#030F1Cff',
         'spanish-gray': '#8F8E91ff',
-        'prussian-blue': '#032134ff',
+        'prussian-blue': '#001220',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // allows to target children -> className'child:xyz'
+    function ({ addVariant }) {
+      addVariant('child', '& > *')
+      addVariant('child-hover', '& > *:hover')
+    },
+  ],
 }

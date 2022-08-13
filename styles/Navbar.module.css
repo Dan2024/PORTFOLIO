@@ -1,0 +1,10 @@
+.navbarBg {
+  aspect-ratio: 900/600;
+  z-index: -100;
+  position: absolute;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('/layered-peaks-haikei (1).svg');
+}
