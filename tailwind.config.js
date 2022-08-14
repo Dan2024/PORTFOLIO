@@ -17,6 +17,7 @@ module.exports = {
     gridTemplateColumns: {
       'nav-layout': 'auto 1fr auto',
       'nav-layout-2': 'repeat(4, 1fr)', // grid-cols-4 bug on tw
+      'icons-layout': 'repeat(auto-fit, minmax(6rem, 1fr))',
     },
   },
   plugins: [
