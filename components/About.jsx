@@ -9,7 +9,7 @@ export default function About() {
   }, [])
 
   return (
-    <section className='max-w-7xl mx-auto mt-11'>
+    <section className='max-w-7xl mx-auto my-11'>
       <RoughNotation
         type='bracket'
         brackets={['left', 'right']}
@@ -20,7 +20,7 @@ export default function About() {
       >
         <div className='p-4'>
           <h1 className='mx-auto w-auto'>
-            Hey, I'm Dan. Former Scientist Aspiring Web Developer.
+            Hey, I'm Dan. Former Scientist, Aspiring Web Developer.
           </h1>
           <h2 className='text-base mt-4'>
             After leaving a career in science, I embarked on a journey to learn
@@ -29,16 +29,16 @@ export default function About() {
             experience i have honed my development skills. Also exploring other
             technologies such as Next.js and typeScript.
           </h2>
+          <a
+            href='https://www.linkedin.com/in/daniel-northcott-750107204'
+            target='_blank'
+          >
+            <button className=''>LinkedIn</button>
+          </a>
+          <a href='https://github.com/Dan2024' target='_blank'>
+            <button className=''>GitHub</button>
+          </a>
         </div>
-        <a
-          href='https://www.linkedin.com/in/daniel-northcott-750107204'
-          target='_blank'
-        >
-          <button>LinkedIn</button>
-        </a>
-        <a href='https://github.com/Dan2024' target='_blank'>
-          <button>GitHub</button>
-        </a>
       </RoughNotation>
     </section>
   )
