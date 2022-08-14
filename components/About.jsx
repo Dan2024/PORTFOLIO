@@ -9,16 +9,36 @@ export default function About() {
   }, [])
 
   return (
-    <section className='mx-auto w-40'>
+    <section className='max-w-7xl mx-auto mt-11'>
       <RoughNotation
         type='bracket'
         brackets={['left', 'right']}
         show={state}
-        animationDelay={1000}
+        animationDelay={900}
         animationDuration={1000}
         color='#000'
       >
-        <h1 className='mx-auto w-40'>Hey</h1>
+        <div className='p-4'>
+          <h1 className='mx-auto w-auto'>
+            Hey, I'm Dan. Former Scientist Aspiring Web Developer.
+          </h1>
+          <h2 className='text-base mt-4'>
+            After leaving a career in science, I embarked on a journey to learn
+            software engineering. I spent 6 months with (link) boolean UK where
+            i learnt the fundamentals of full stack development. Throughout this
+            experience i have honed my development skills. Also exploring other
+            technologies such as Next.js and typeScript.
+          </h2>
+        </div>
+        <a
+          href='https://www.linkedin.com/in/daniel-northcott-750107204'
+          target='_blank'
+        >
+          <button>LinkedIn</button>
+        </a>
+        <a href='https://github.com/Dan2024' target='_blank'>
+          <button>GitHub</button>
+        </a>
       </RoughNotation>
     </section>
   )
