@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import About from '../components/About'
+import MyWork from '../components/myWork'
 import Navbar from '../components/Navbar'
 import SkillsAndTools from '../components/SkillsAndTools'
 
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <About />
       <SkillsAndTools />
+      <MyWork />
     </div>
   )
 }

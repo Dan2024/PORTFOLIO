@@ -19,8 +19,9 @@ export default function About() {
         color='#000'
       >
         <div className='p-4'>
+          <h1 className='mx-auto w-auto'>Hey, I'm Dan.</h1>
           <h1 className='mx-auto w-auto'>
-            Hey, I'm Dan. Former Scientist, Aspiring Web Developer.
+            Former Scientist, Aspiring Developer.
           </h1>
           <h2 className='text-base mt-4'>
             After leaving a career in science, I embarked on a journey to learn
