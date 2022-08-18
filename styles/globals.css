@@ -9,7 +9,7 @@ html {
 @layer base {
   body {
     /* custom values, tracking wide spaces out text */
-    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide;
+    @apply bg-[#ecf0f3] text-rich-black tracking-wide;
     font-family: 'Poppins', sans-serif;
   }
 
@@ -37,6 +37,6 @@ html {
   }
 
   button {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-[#1f2937] text-white p-2 w-32 ml-5 mt-5;
+    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-rich-black text-white p-2 w-32 ml-5 mt-5;
   }
 }

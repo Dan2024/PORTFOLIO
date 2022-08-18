@@ -9,7 +9,7 @@ module.exports = {
       colors: {
         'davys-grey': '#4F5155ff',
         'blue-sapphire': '#236283ff',
-        'rich-black': '#030F1Cff',
+        'rich-black': '#000000',
         'spanish-gray': '#8F8E91ff',
         'prussian-blue': '#001220',
       },
@@ -18,6 +18,7 @@ module.exports = {
       'nav-layout': 'auto 1fr auto',
       'nav-layout-2': 'repeat(4, 1fr)', // grid-cols-4 bug on tw
       'icons-layout': 'repeat(auto-fit, minmax(6rem, 1fr))',
+      'hero-layout': '1fr auto',
     },
   },
   plugins: [
