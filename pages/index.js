@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import About from '../components/About'
+import HeroText from '../components/HeroText'
 import MyWork from '../components/myWork'
 import Navbar from '../components/Navbar'
 import SkillsAndTools from '../components/SkillsAndTools'
@@ -13,6 +14,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Navbar />
+      <HeroText />
       <About />
       <SkillsAndTools />
       <MyWork />

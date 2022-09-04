@@ -32,8 +32,8 @@ export default function SkillsAndTools() {
         </p>
 
         <div className='mx-auto mt-10 max-w-3xl grid grid-cols-icons-layout py-10 text-sm gap-20 child:grid child:place-items-center'>
-          {iconNames.map((iconName) => (
-            <div>
+          {iconNames.map((iconName, idx) => (
+            <div key={idx}>
               <DevIcon icon={iconName} style={devIconStyle} />
               {iconName.toUpperCase()}
             </div>
