@@ -9,10 +9,10 @@ export default function HeroText() {
   }, [])
 
   return (
-    <section className='max-w-7xl mx-auto my-11'>
-      <div className='py-4'>
-        <h1 className='mx-auto w-auto'>Hey, I'm Dan.</h1>
-        <h1 className='mx-auto w-auto'>
+    <section className='max-w-7xl mx-auto my-11 h-screen'>
+      <div className='pt-[30%]'>
+        <h1 className='mx-auto w-auto text-7xl'>Hey, I'm Dan.</h1>
+        <h1 className='mx-auto w-auto text-7xl'>
           I'm a Scientist turned{' '}
           {/* <RoughNotation
               type='bracket'
