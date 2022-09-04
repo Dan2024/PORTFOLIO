@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function MyWork() {
   return (
     <section className='max-w-7xl mx-auto'>
-      <h3>My Work</h3>
+      <h2>My Work</h2>
       <div className=''>
         <div className='w-1/2 h-96 relative overflow-hidden rounded-2xl'>
           <Image

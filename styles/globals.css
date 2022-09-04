@@ -25,11 +25,11 @@ html {
 
   h1 {
     /* for responsiveness - tw starts mobile first */
-    @apply text-4xl sm:text-5xl md:text-6xl;
+    @apply text-7xl sm:text-5xl md:text-7xl;
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl;
+    @apply text-2xl;
   }
 
   li {
@@ -38,5 +38,27 @@ html {
 
   button {
     @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-rich-black text-white p-2 w-32 ml-5 mt-5;
+  }
+
+  .divider1 {
+    aspect-ratio: 1500/150;
+    /* z-index: -100; */
+    /* position: absolute; */
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('/lp1.svg');
+  }
+
+  .divider2 {
+    aspect-ratio: 1500/150;
+    /* z-index: -100; */
+    /* position: absolute; */
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('/lp2.svg');
   }
 }
