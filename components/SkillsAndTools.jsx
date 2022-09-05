@@ -7,12 +7,12 @@ const devIconStyle = {
 }
 
 const iconNames = [
+  'git',
   'html5',
   'css3',
   'javascript',
-  'react',
   'nodejs',
-  'git',
+  'react',
   'postgresql',
 ]
 

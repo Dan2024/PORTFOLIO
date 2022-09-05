@@ -29,7 +29,7 @@ html {
   }
 
   h2 {
-    @apply text-2xl;
+    @apply text-3xl;
   }
 
   li {
@@ -37,7 +37,15 @@ html {
   }
 
   button {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-rich-black text-white p-2 w-32 ml-5 mt-5;
+    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-rich-black text-white p-2 w-32 mr-5 mt-5;
+  }
+
+  button:hover {
+    @apply text-rich-black bg-[#ecf0f3];
+  }
+
+  button:hover {
+    transition: all 0.4s ease 0s;
   }
 
   .divider1 {
@@ -60,5 +68,9 @@ html {
     background-position: center;
     background-size: cover;
     background-image: url('/lp2.svg');
+  }
+
+  .radio-btn-bio:checked + label {
+    background-color: #61a0af;
   }
 }

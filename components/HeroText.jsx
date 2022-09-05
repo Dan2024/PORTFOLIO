@@ -19,9 +19,9 @@ export default function HeroText() {
             strokeWidth={4}
             show={state}
             animationDelay={500}
-            animationDuration={1200}
+            animationDuration={1000}
             padding={[-8, 'bottom']}
-            color='#43c962'
+            color='#61a0af'
           >
             Dan.
           </RoughNotation>
@@ -30,12 +30,13 @@ export default function HeroText() {
           I'm a Scientist turned{' '}
           <RoughNotation
             type='highlight'
-            brackets={['left', 'right']}
+            // brackets={['left', 'right']}
+            padding={(5)[('left', 'right', 'top', 'bottom')]}
             show={state}
             strokeWidth={2}
             animationDelay={1800}
-            animationDuration={1500}
-            color='#43c962'
+            animationDuration={1000}
+            color='#61a0af'
           >
             Developer.
           </RoughNotation>
