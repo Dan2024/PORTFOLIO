@@ -39,7 +39,7 @@ export default function About() {
                   onChange={handleRadioClick}
                 />
                 <label
-                  for='short-bio'
+                  htmlFor='short-bio'
                   className='w-32 inline-block text-center py-2 uppercase mr-5 rounded-lg bg-rich-black text-white cursor-pointer transition duration-150 ease-out hover:ease-in'
                 >
                   <span>Short</span>
@@ -55,7 +55,7 @@ export default function About() {
                   onChange={handleRadioClick}
                 />
                 <label
-                  for='medium-bio'
+                  htmlFor='medium-bio'
                   className='w-32 inline-block text-center py-2 uppercase mr-5 rounded-lg bg-rich-black text-white cursor-pointer transition duration-150 ease-out hover:ease-in'
                 >
                   <span>Medium</span>
@@ -71,7 +71,7 @@ export default function About() {
                   onChange={handleRadioClick}
                 />
                 <label
-                  for='long-bio'
+                  htmlFor='long-bio'
                   className='w-32 inline-block text-center py-2 uppercase mr-5 rounded-lg bg-rich-black text-white cursor-pointer transition duration-150 ease-out hover:ease-in'
                 >
                   <span>Long</span>
