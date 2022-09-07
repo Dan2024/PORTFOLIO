@@ -1,45 +1,13 @@
-// import Image from 'next/image'
-
-// export default function MyWork() {
-//   return (
-//     <section className='max-w-7xl mx-auto'>
-//       <h2>My Work</h2>
-//       <div className=''>
-//         <div className='w-1/2 h-96 relative overflow-hidden rounded-2xl'>
-//           <Image
-//             src='/codified.png'
-//             layout='fill'
-//             objectFit='cover'
-//             objectPosition='top center'
-//             quality='1'
-//           />
-//           <div>
-//             <p>
-//               CODIFEYED is a website I created focusing on Front-End design and
-//               computer science topics i was only able to very briefly cover in
-//               my bootcamp.
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   )
-// }
-
-import { useSpring, animated, config } from '@react-spring/three'
+import { animated } from '@react-spring/three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import * as THREE from 'three'
-import React, { Suspense, useState, useEffect, useRef } from 'react'
-import {
-  Canvas,
-  useLoader,
-  useFrame,
-  useThree,
-  extend,
-} from '@react-three/fiber'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-// import { OrbitControls, draco } from '@react-three/drei'
+import React, { useRef } from 'react'
+import { Canvas, useFrame, useThree, extend } from '@react-three/fiber'
 
+// ------- mouse position -------
+let mousePos = new THREE.Vector2(0, 0)
+
+// ------- controls -------
 extend({ OrbitControls })
 
 const Controls = () => {
@@ -50,41 +18,57 @@ const Controls = () => {
     orbRef.current.update()
   })
 
-  return (
-    <orbitControls
-      autoRotate
-      maxPolarAngle={Math.PI / 2}
-      minPolarAngle={Math.PI / 3}
-      args={[camera, gl.domElement]}
-      ref={orbRef}
-    />
-  )
+  return <orbitControls args={[camera, gl.domElement]} ref={orbRef} />
 }
 
+// ------- box object -------
 function RotatingBox() {
-  const [active, setActive] = useState(false)
-
-  const { scale } = useSpring({
-    scale: active ? 1.5 : 1,
-    config: config.wobbly,
-  })
+  const myMesh = React.useRef()
 
   return (
-    <animated.mesh scale={scale} onClick={() => setActive(!active)}>
+    <animated.mesh ref={myMesh} position={[0, 0, 0.25 * 0.5]}>
       <boxBufferGeometry />
       <meshPhongMaterial color='royalblue' />
     </animated.mesh>
   )
 }
 
+function Rig() {
+  const { camera, mouse } = useThree()
+  const vec = new THREE.Vector3()
+  return useFrame(() =>
+    camera.position.lerp(
+      vec.set(mouse.x * 4, mouse.y * 3, camera.position.z),
+      0.02
+    )
+  )
+}
+
+// ------- canvas -------
 export default function MyWork() {
   return (
-    <div className='w-[400px] h-[400px] shadow-xl'>
-      <Canvas>
+    <div className='w-[400px] h-[400px] shadow-xl ml-10'>
+      <Canvas
+        onMouseMove={(e) => {
+          let x =
+            e.clientX -
+            e.target.getBoundingClientRect().left -
+            e.target.getBoundingClientRect().width * 0.5
+          let y =
+            e.clientY -
+            e.target.getBoundingClientRect().top -
+            e.target.getBoundingClientRect().height * 0.5
+
+          mousePos.x = x * 0.0001
+          mousePos.y = y * 0.0001
+          // console.log('x: ' + x + ' y: ' + y, mousePos.x, mousePos.y)
+        }}
+      >
         <Controls />
         <RotatingBox />
         <ambientLight intensity={0.1} />
-        <directionalLight />
+        <directionalLight position={[5, 10, 5]} />
+        <Rig />
       </Canvas>
     </div>
   )

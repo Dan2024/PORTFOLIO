@@ -14,7 +14,7 @@ export default function About() {
     <>
       {/* <div className='divider'></div> */}
       <div className='bg-gray-200'>
-        <section className='max-w-7xl mx-auto h-[80vh]'>
+        <section className='max-w-7xl mx-auto h-[700px]'>
           <h2 className='pt-20'>About</h2>
           {/* <h2 className='font-light'>Who Is Dan?</h2> */}
           <div className='grid grid-cols-2-col-grid__expand-two gap-20 pt-16'>
