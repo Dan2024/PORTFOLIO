@@ -1,8 +1,10 @@
 import { animated } from '@react-spring/three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import * as THREE from 'three'
-import React, { useRef } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { Canvas, useFrame, useThree, extend } from '@react-three/fiber'
+import { ContactShadows, PerspectiveCamera } from '@react-three/drei'
 
 // ------- mouse position -------
 let mousePos = new THREE.Vector2(0, 0)
@@ -26,10 +28,10 @@ function RotatingBox() {
   const myMesh = React.useRef()
 
   return (
-    <animated.mesh ref={myMesh} position={[0, 0, 0.25 * 0.5]}>
+    <mesh ref={myMesh}>
       <boxBufferGeometry />
       <meshPhongMaterial color='royalblue' />
-    </animated.mesh>
+    </mesh>
   )
 }
 
@@ -38,17 +40,100 @@ function Rig() {
   const vec = new THREE.Vector3()
   return useFrame(() =>
     camera.position.lerp(
-      vec.set(mouse.x * 4, mouse.y * 3, camera.position.z),
+      vec.set(mouse.x * 3, mouse.y * 2, camera.position.z),
       0.02
     )
+  )
+}
+// ------- portfolio -------
+const PortfolioMonitor = () => {
+  const [model, setModel] = useState()
+
+  useEffect(() => {
+    new GLTFLoader().load('/portfolio-monitor-3.glb', setModel)
+  })
+
+  return model ? (
+    <primitive castShadow object={model.scene} position={[0, -0.5, 0]} />
+  ) : null
+}
+
+const Floor = () => {
+  return (
+    <mesh receiveShadow rotation={[5, 0, 0]} position={[0, -3, 0]}>
+      <planeBufferGeometry attach='geometry' args={[30, 10]} />
+      <meshStandardMaterial attach='material' color='#528998' />
+    </mesh>
+    // <mesh rotation={1.57} position={[0, -5, 0]}>
+    //   <planeGeometry args={[7, 7]} />
+    //   <meshStandardMaterial color='#000' />
+    // </mesh>
+  )
+}
+
+function Light({ brightness, color }) {
+  return (
+    <rectAreaLight
+      width={3}
+      height={3}
+      color={color}
+      intensity={brightness}
+      position={[-2, 0, 5]}
+      lookAt={[0, 0, 0]}
+      penumbra={1}
+      castShadow
+    />
+  )
+}
+
+function KeyLight({ brightness, color }) {
+  return (
+    <rectAreaLight
+      width={3}
+      height={3}
+      color={color}
+      intensity={brightness}
+      position={[-2, 0, 5]}
+      lookAt={[0, 0, 0]}
+      penumbra={1}
+      castShadow
+    />
+  )
+}
+function FillLight({ brightness, color }) {
+  return (
+    <rectAreaLight
+      width={3}
+      height={3}
+      intensity={brightness}
+      color={color}
+      position={[2, 1, 4]}
+      lookAt={[0, 0, 0]}
+      penumbra={2}
+      castShadow
+    />
+  )
+}
+function RimLight({ brightness, color }) {
+  return (
+    <rectAreaLight
+      width={2}
+      height={2}
+      intensity={brightness}
+      color={color}
+      position={[1, 4, -2]}
+      rotation={[0, 180, 0]}
+      castShadow
+    />
   )
 }
 
 // ------- canvas -------
 export default function MyWork() {
   return (
-    <div className='w-[400px] h-[400px] shadow-xl ml-10'>
+    <div className='w-[500px] h-[400px] shadow-xl ml-10'>
       <Canvas
+        // camera={{ position: [0, 0, 11], near: 5, far: 20 }}
         onMouseMove={(e) => {
           let x =
             e.clientX -
@@ -65,10 +150,16 @@ export default function MyWork() {
         }}
       >
         <Controls />
-        <RotatingBox />
-        <ambientLight intensity={0.1} />
-        <directionalLight position={[5, 10, 5]} />
+        {/* <RotatingBox /> */}
+        <Floor />
+        <PerspectiveCamera makeDefault position={[0, 3, 9]} />
+        <ambientLight intensity={1} />
+        <Light brightness={6} color={'white'} />
+        <KeyLight brightness={5.6} color='#ffbdf4' />
+        <FillLight brightness={2.6} color='#bdefff' />
+        <RimLight brightness={54} color='#fff' />
         <Rig />
+        <PortfolioMonitor />
       </Canvas>
     </div>
   )
