@@ -1,165 +1,91 @@
-import { animated } from '@react-spring/three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
+import { useFrame, Canvas, useThree } from '@react-three/fiber'
+import { useEffect, useRef, Suspense, useState } from 'react'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import * as THREE from 'three'
-import React, { useRef, useState, useEffect } from 'react'
-import { Canvas, useFrame, useThree, extend } from '@react-three/fiber'
-import { ContactShadows, PerspectiveCamera } from '@react-three/drei'
 
-// ------- mouse position -------
-let mousePos = new THREE.Vector2(0, 0)
+const angleToRadians = (angleInDeg) => (Math.PI / 180) * angleInDeg
 
-// ------- controls -------
-extend({ OrbitControls })
-
-const Controls = () => {
-  const { camera, gl } = useThree()
-  const orbRef = useRef()
-
-  useFrame(() => {
-    orbRef.current.update()
+function Scene() {
+  // Code to move the camera around
+  const orbitControlsRef = useRef(null)
+  useFrame((state) => {
+    orbitControlsRef.current.dampingFactor = 0.003
+    orbitControlsRef.current.enableZoom = false
+    if (!!orbitControlsRef.current) {
+      const { x, y } = state.mouse
+      // console.log(orbitControlsRef.current)
+      orbitControlsRef.current.setAzimuthalAngle(-x * angleToRadians(30))
+      orbitControlsRef.current.setPolarAngle((y + 1) * angleToRadians(90 - 30))
+      orbitControlsRef.current.update()
+    }
   })
 
-  return <orbitControls args={[camera, gl.domElement]} ref={orbRef} />
-}
+  const PortfolioMonitor = () => {
+    const [model, setModel] = useState()
 
-// ------- box object -------
-function RotatingBox() {
-  const myMesh = React.useRef()
+    useEffect(() => {
+      new GLTFLoader().load('/portfolio-monitor-3.glb', setModel)
+    })
 
-  return (
-    <mesh ref={myMesh}>
-      <boxBufferGeometry />
-      <meshPhongMaterial color='royalblue' />
-    </mesh>
-  )
-}
+    return model ? (
+      <primitive castShadow object={model.scene} position={[0, 0, 0]} />
+    ) : null
+  }
 
-function Rig() {
-  const { camera, mouse } = useThree()
-  const vec = new THREE.Vector3()
-  return useFrame(() =>
-    camera.position.lerp(
-      vec.set(mouse.x * 3, mouse.y * 2, camera.position.z),
-      0.02
+  const Floor = () => {
+    return (
+      <mesh
+        rotation={[-angleToRadians(90), 0, 0]}
+        position={[0, -3, 0]}
+        receiveShadow
+      >
+        <planeGeometry args={[40, 20]} />
+        <meshStandardMaterial color='#58bedb' />
+      </mesh>
     )
-  )
-}
-// ------- portfolio -------
-const PortfolioMonitor = () => {
-  const [model, setModel] = useState()
+  }
 
-  useEffect(() => {
-    new GLTFLoader().load('/portfolio-monitor-3.glb', setModel)
-  })
+  return (
+    <>
+      {/* Camera */}
+      <PerspectiveCamera makeDefault position={[0, 3, 9]} />
+      <OrbitControls
+        ref={orbitControlsRef}
+        minPolarAngle={angleToRadians(60)}
+        maxPolarAngle={angleToRadians(85)}
+        enableDampening={true}
+        panSpeed={0.1}
+      />
 
-  return model ? (
-    <primitive castShadow object={model.scene} position={[0, -0.5, 0]} />
-  ) : null
-}
+      {/* Ball */}
+      {/* <mesh position={[0, 0, 0]} castShadow>
+        <sphereGeometry args={[0.5, 32, 32]} />
+        <meshStandardMaterial color='#ffffff' metalness={0.6} roughness={0.2} />
+      </mesh> */}
 
-const Floor = () => {
-  return (
-    <mesh receiveShadow rotation={[5, 0, 0]} position={[0, -3, 0]}>
-      <planeBufferGeometry attach='geometry' args={[30, 10]} />
-      <meshStandardMaterial attach='material' color='#528998' />
-    </mesh>
-    // <mesh rotation={1.57} position={[0, -5, 0]}>
-    //   <planeGeometry args={[7, 7]} />
-    //   <meshStandardMaterial color='#000' />
-    // </mesh>
-  )
-}
+      {/* Objects */}
+      <PortfolioMonitor />
+      <Floor />
 
-function Light({ brightness, color }) {
-  return (
-    <rectAreaLight
-      width={3}
-      height={3}
-      color={color}
-      intensity={brightness}
-      position={[-2, 0, 5]}
-      lookAt={[0, 0, 0]}
-      penumbra={1}
-      castShadow
-    />
-  )
-}
-
-function KeyLight({ brightness, color }) {
-  return (
-    <rectAreaLight
-      width={3}
-      height={3}
-      color={color}
-      intensity={brightness}
-      position={[-2, 0, 5]}
-      lookAt={[0, 0, 0]}
-      penumbra={1}
-      castShadow
-    />
-  )
-}
-function FillLight({ brightness, color }) {
-  return (
-    <rectAreaLight
-      width={3}
-      height={3}
-      intensity={brightness}
-      color={color}
-      position={[2, 1, 4]}
-      lookAt={[0, 0, 0]}
-      penumbra={2}
-      castShadow
-    />
-  )
-}
-function RimLight({ brightness, color }) {
-  return (
-    <rectAreaLight
-      width={2}
-      height={2}
-      intensity={brightness}
-      color={color}
-      position={[1, 4, -2]}
-      rotation={[0, 180, 0]}
-      castShadow
-    />
+      {/* Lighting */}
+      <ambientLight args={['#ffffff', 0.25]} />
+      <directionalLight
+        args={['#ffffff', 1.5, 7, angleToRadians(45), 0.4]}
+        position={[5, 1, -2]}
+        castShadow
+      />
+    </>
   )
 }
 
 // ------- canvas -------
 export default function MyWork() {
   return (
-    <div className='w-[500px] h-[400px] shadow-xl ml-10'>
-      <Canvas
-        // camera={{ position: [0, 0, 11], near: 5, far: 20 }}
-        onMouseMove={(e) => {
-          let x =
-            e.clientX -
-            e.target.getBoundingClientRect().left -
-            e.target.getBoundingClientRect().width * 0.5
-          let y =
-            e.clientY -
-            e.target.getBoundingClientRect().top -
-            e.target.getBoundingClientRect().height * 0.5
-
-          mousePos.x = x * 0.0001
-          mousePos.y = y * 0.0001
-          // console.log('x: ' + x + ' y: ' + y, mousePos.x, mousePos.y)
-        }}
-      >
-        <Controls />
-        {/* <RotatingBox /> */}
-        <Floor />
-        <PerspectiveCamera makeDefault position={[0, 3, 9]} />
-        <ambientLight intensity={1} />
-        <Light brightness={6} color={'white'} />
-        <KeyLight brightness={5.6} color='#ffbdf4' />
-        <FillLight brightness={2.6} color='#bdefff' />
-        <RimLight brightness={54} color='#fff' />
-        <Rig />
-        <PortfolioMonitor />
+    <div className='w-[500px] h-[400px] shadow-xl ml-20'>
+      <Canvas frameloop='demand' shadows>
+        <Suspense fallback={<></>}>
+          <Scene />
+        </Suspense>
       </Canvas>
     </div>
   )
