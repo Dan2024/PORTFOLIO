@@ -13,7 +13,7 @@ export default function About() {
   return (
     <>
       {/* <div className='divider'></div> */}
-      <div className='bg-gray-200'>
+      <div className='bg-gray-200' id='about'>
         <section className='max-w-7xl mx-auto h-[700px]'>
           <h2 className='pt-20'>About</h2>
           {/* <h2 className='font-light'>Who Is Dan?</h2> */}

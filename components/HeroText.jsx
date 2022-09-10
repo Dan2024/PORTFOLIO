@@ -9,7 +9,7 @@ export default function HeroText() {
   }, [])
 
   return (
-    <section className='max-w-7xl mx-auto my-11 h-[90vh]'>
+    <section className='max-w-7xl mx-auto my-11 h-[90vh]' id='home'>
       <div className='pt-[25vh]'>
         <h1 className='mx-auto w-auto mb-5'>
           Hey, I'm{' '}

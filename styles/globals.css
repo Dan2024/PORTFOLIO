@@ -32,16 +32,20 @@ html {
     @apply text-3xl;
   }
 
+  h3 {
+    @apply text-3xl;
+  }
+
   li {
     @apply cursor-pointer;
   }
 
   button {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-rich-black text-white p-2 w-32 mr-5 mt-5;
+    @apply shadow-md shadow-gray-400 rounded-xl uppercase bg-rich-black text-white p-2 w-32 mr-5 mt-5;
   }
 
   button:hover {
-    @apply text-rich-black bg-[#ecf0f3];
+    @apply bg-[#528998];
   }
 
   button:hover {

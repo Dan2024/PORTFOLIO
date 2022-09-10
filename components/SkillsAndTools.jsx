@@ -19,7 +19,7 @@ const iconNames = [
 export default function SkillsAndTools() {
   return (
     <>
-      <div className='divider1'></div>
+      <div className='divider1' id='skills-and-tools'></div>
       <section className='bg-rich-black'>
         <div className='max-w-7xl mx-auto  text-white'>
           <h2 className='pt-10 pb-10'>Skills And Tools</h2>
