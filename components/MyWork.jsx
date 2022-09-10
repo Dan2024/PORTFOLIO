@@ -98,7 +98,7 @@ export default function MyWork() {
   return (
     <div className='bg-gray-200'>
       <div className='max-w-7xl mx-auto ' id='my-work'>
-        <h2 className='pb-10'>MY WORK</h2>
+        <h2 className='pb-10'>My Work</h2>
         <div className='grid grid-cols-2-col-grid__expand-two'>
           <div className='w-[500px] h-[400px]'>
             <Canvas shadows>
@@ -112,7 +112,7 @@ export default function MyWork() {
             </Canvas>
           </div>
           <div className='ml-5'>
-            <h3>CODIFEYED</h3>
+            <h2>CODIFEYED</h2>
             <p>
               A Front-End website that visualizes computer science topics, such
               as sorting algorithms and reccursion.
@@ -157,7 +157,7 @@ export default function MyWork() {
             </Canvas>
           </div>
           <div className='ml-5'>
-            <h3>PORTFOLIO WEBSITE</h3>
+            <h2>Portfolio Website</h2>
             <p>
               My personal portfolio website focused on front-end design,
               experimenting with webGL, React Three Fiber and Next.js.

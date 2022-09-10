@@ -32,10 +32,6 @@ html {
     @apply text-3xl;
   }
 
-  h3 {
-    @apply text-3xl;
-  }
-
   li {
     @apply cursor-pointer;
   }

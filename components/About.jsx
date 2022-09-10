@@ -12,11 +12,10 @@ export default function About() {
 
   return (
     <>
-      {/* <div className='divider'></div> */}
       <div className='bg-gray-200' id='about'>
         <section className='max-w-7xl mx-auto h-[700px]'>
           <h2 className='pt-20'>About</h2>
-          {/* <h2 className='font-light'>Who Is Dan?</h2> */}
+
           <div className='grid grid-cols-2-col-grid__expand-two gap-20 pt-16'>
             <div className='w-96 h-96 relative rounded-full overflow-hidden'>
               <Image
