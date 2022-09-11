@@ -117,7 +117,7 @@ export default function About() {
                   </h3>
                   <h3 className='font-normal mt-4 '>
                     This was great... the problem was i didnt know how to code.
-                    Further research coupled with the desire for a career
+                    Further research, coupled with the desire for a career
                     change, led me to embark on a journey to learn software
                     engineering where I spent 6 months with{' '}
                     <a

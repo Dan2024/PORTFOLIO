@@ -1,5 +1,5 @@
 import DevIcon from 'devicon-react-svg'
-import { PrismaLogo, ExpressLogo, TailwindLogo } from '../public/Logos'
+import { PrismaLogo, ExpressLogo, TailwindLogo } from '../public/Logos/logos.js'
 
 const devIconStyle = {
   fill: '#ecf0f3',

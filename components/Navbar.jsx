@@ -1,24 +1,26 @@
+import Link from 'next/link'
+
 export default function Navbar() {
   return (
     <>
       <div className='sticky top-0 w-full shadow-xl z-[100] bg-[#ecf0f3]'>
         <nav className='max-w-7xl grid grid-cols-nav-layout mx-auto py-5'>
           <h2>
-            <a href='/#home'>Daniel Northcott</a>
+            <Link href='/'>Daniel Northcott</Link>
           </h2>
           <div></div>
           <ul className='hidden md:grid grid-cols-nav-layout-2  place-items-center child:mx-4'>
             <li>
-              <a href='/#about'>About</a>
+              <Link href='/#about'>About</Link>
             </li>
             <li>
-              <a href='/#skills-and-tools'>Skills</a>
+              <Link href='/#skills-and-tools'>Skills</Link>
             </li>
             <li>
-              <a href='/#my-work'>My Work</a>
+              <Link href='/#my-work'>My Work</Link>
             </li>
             <li>
-              <a href='/#contact'>Contact</a>
+              <Link href='/#contact'>Contact</Link>
             </li>
           </ul>
         </nav>

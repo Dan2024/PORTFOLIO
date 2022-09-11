@@ -32,6 +32,10 @@ html {
     @apply text-3xl;
   }
 
+  h3 {
+    @apply text-2xl;
+  }
+
   li {
     @apply cursor-pointer;
   }
@@ -53,37 +57,28 @@ html {
     padding: 0;
   }
 
-  .divider1 {
-    aspect-ratio: 1500/150;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url('/lp1.svg');
-  }
-  .divider2 {
-    aspect-ratio: 1500/150;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url('/lp2.svg');
-  }
-  .divider3 {
-    aspect-ratio: 1500/150;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url('/lp3.svg');
-  }
+  .divider1,
+  .divider2,
+  .divider3,
   .divider4 {
     aspect-ratio: 1500/150;
     width: 100vw;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url('/lp4.svg');
+  }
+
+  .divider1 {
+    background-image: url('/layered-peaks-svgs/lp1.svg');
+  }
+  .divider2 {
+    background-image: url('/layered-peaks-svgs/lp2.svg');
+  }
+  .divider3 {
+    background-image: url('/layered-peaks-svgs/lp3.svg');
+  }
+  .divider4 {
+    background-image: url('/layered-peaks-svgs/lp4.svg');
   }
 
   .radio-btn-bio:checked + label {

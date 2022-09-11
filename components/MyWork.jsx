@@ -17,11 +17,13 @@ import Link from 'next/link'
 
 const angleToRadians = (angleInDeg) => (Math.PI / 180) * angleInDeg
 
-const codifeyedMonitorGLTFPath = '/glb/codifeyed-monitor-transformed.glb'
+const codifeyedMonitorGLTFPath =
+  '/monitor-glb-files/codifeyed-monitor-transformed.glb'
 const codifeyedMonitorImgNodeName = 'Screenshot_2022-09-08_at_100114'
 const codifeyedMonitorImgMaterialName = 'Screenshot 2022-09-08 at 10.01.14'
 
-const portfolioMonitorGLTFPath = '/glb/portfolio-monitor-transformed.glb'
+const portfolioMonitorGLTFPath =
+  '/monitor-glb-files/portfolio-monitor-transformed.glb'
 const portfolioMonitorImgNodeName = 'Screenshot_2022-09-08_at_100154'
 const portfolioMonitorImgMaterialName = 'Screenshot 2022-09-08 at 10.01.54'
 
