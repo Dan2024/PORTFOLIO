@@ -13,6 +13,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
 
 const angleToRadians = (angleInDeg) => (Math.PI / 180) * angleInDeg
 
@@ -128,14 +129,21 @@ export default function MyWork() {
                 className='h-8'
               />
             </div> */}
-            <button className=''>more info</button>
+            <button className=''>
+              <Link href='/codifeyed'>More Info</Link>
+            </button>
             <div className='mt-10 grid grid-cols-3-col-grid__expand-three'>
-              <a href='https://github.com/Dan2024/CODIFEYED' target='_blank'>
+              <a
+                href='https://github.com/Dan2024/CODIFEYED'
+                target='_blank'
+                rel='noreferrer'
+              >
                 <FontAwesomeIcon icon={faGithub} className='w-8 h-8 mr-5' />
               </a>
               <a
                 href='https://www.linkedin.com/in/daniel-northcott-750107204'
                 target='_blank'
+                rel='noreferrer'
               >
                 <FontAwesomeIcon
                   icon={faArrowUpRightFromSquare}
@@ -192,9 +200,15 @@ export default function MyWork() {
                 className=''
               />
             </div> */}
-            <button className=''>more info</button>
+            <button className=''>
+              <Link href='/portfolio'>More Info</Link>
+            </button>
             <div className='mt-10 grid grid-cols-2-col-grid__expand-two'>
-              <a href='https://github.com/Dan2024/CODIFEYED' target='_blank'>
+              <a
+                href='https://github.com/Dan2024/CODIFEYED'
+                target='_blank'
+                rel='noreferrer'
+              >
                 <FontAwesomeIcon icon={faGithub} className='w-8 h-8 mr-5' />
               </a>
               <div className='spacer'></div>

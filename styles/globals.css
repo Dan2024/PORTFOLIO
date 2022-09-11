@@ -51,29 +51,39 @@ html {
   canvas {
     height: 0;
     padding: 0;
-    /* width: 100%;
-    height: 100%; */
   }
+
   .divider1 {
     aspect-ratio: 1500/150;
-    /* z-index: -100; */
-    /* position: absolute; */
     width: 100vw;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-image: url('/lp1.svg');
   }
-
   .divider2 {
     aspect-ratio: 1500/150;
-    /* z-index: -100; */
-    /* position: absolute; */
     width: 100vw;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-image: url('/lp2.svg');
+  }
+  .divider3 {
+    aspect-ratio: 1500/150;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('/lp3.svg');
+  }
+  .divider4 {
+    aspect-ratio: 1500/150;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url('/lp4.svg');
   }
 
   .radio-btn-bio:checked + label {

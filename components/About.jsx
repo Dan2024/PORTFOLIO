@@ -92,6 +92,7 @@ export default function About() {
                     <a
                       className='text-[#528998]'
                       target='_blank'
+                      rel='noreferrer'
                       href='https://boolean.co.uk/'
                     >
                       Boolean UK
@@ -122,6 +123,7 @@ export default function About() {
                     <a
                       className='text-[#528998]'
                       target='_blank'
+                      rel='noreferrer'
                       href='https://boolean.co.uk/'
                     >
                       Boolean UK
@@ -142,13 +144,18 @@ export default function About() {
                 <a
                   href='https://www.linkedin.com/in/daniel-northcott-750107204'
                   target='_blank'
+                  rel='noreferrer'
                 >
                   <FontAwesomeIcon
                     icon={faLinkedin}
                     className='w-10 h-10 mr-5'
                   />
                 </a>
-                <a href='https://github.com/Dan2024' target='_blank'>
+                <a
+                  href='https://github.com/Dan2024'
+                  target='_blank'
+                  rel='noreferrer'
+                >
                   <FontAwesomeIcon icon={faGithub} className='h-10' />
                 </a>
                 <div className='spacer'></div>
