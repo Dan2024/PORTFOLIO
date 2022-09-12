@@ -1,20 +1,17 @@
-// import DevIcon from 'devicon-react-svg'
-import { PrismaLogo, ExpressLogo, TailwindLogo } from '../public/Logos/logos.js'
-
-const devIconStyle = {
-  fill: '#ecf0f3',
-  width: '5rem',
-}
-
-const iconNames = [
-  'git',
-  'html5',
-  'css3',
-  'javascript',
-  'nodejs',
-  // 'react',
-  'postgresql',
-]
+import {
+  faHtml5,
+  faCss3,
+  faJsSquare,
+  faReact,
+  faNodeJs,
+} from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  PrismaLogo,
+  ExpressLogo,
+  TailwindLogo,
+  PostGreSQLLogo,
+} from '../public/Logos/logos.js'
 
 export default function SkillsAndTools() {
   return (
@@ -34,23 +31,41 @@ export default function SkillsAndTools() {
           </p>
 
           <div className='mx-auto mt-10 grid grid-cols-icons-layout py-10 text-sm gap-8 child:grid child:place-items-center pb-32'>
-            {/* {iconNames.map((iconName, idx) => (
-              <div key={idx}>
-                <DevIcon icon={iconName} style={devIconStyle} />
-                {iconName.toUpperCase()}
-              </div>
-            ))} */}
             <div>
-              <PrismaLogo />
-              PRISMA
+              <FontAwesomeIcon icon={faHtml5} className='px-6' />
+              HTML
+            </div>
+            <div>
+              <FontAwesomeIcon icon={faCss3} className='px-6 py-2' />
+              CSS
+            </div>
+            <div>
+              <FontAwesomeIcon icon={faJsSquare} className='px-6' />
+              JAVASCRIPT
+            </div>
+            <div>
+              <FontAwesomeIcon icon={faReact} className='px-6' />
+              REACT
+            </div>
+            <div>
+              <FontAwesomeIcon icon={faNodeJs} className='px-6' />
+              NODE.JS
+            </div>
+            <div>
+              <TailwindLogo />
+              TAILWIND
             </div>
             <div>
               <ExpressLogo />
               EXPRESS
             </div>
             <div>
-              <TailwindLogo />
-              TAILWIND
+              <PrismaLogo />
+              PRISMA
+            </div>
+            <div className='z-10'>
+              <PostGreSQLLogo />
+              PRISMA
             </div>
           </div>
         </div>
