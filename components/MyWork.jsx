@@ -114,25 +114,17 @@ export default function MyWork() {
               </Suspense>
             </Canvas>
           </div>
+
           <div className='ml-5'>
             <h2>CODIFEYED</h2>
             <p>
               A Front-End website that visualizes computer science topics, such
               as sorting algorithms and reccursion.
             </p>
-            {/* <div className='mt-5 child:w-8 child:h-8 child:inline-block child:ml-2'>
-              <FontAwesomeIcon icon={faHtml5} className='text-[#f06529]' />
-              <FontAwesomeIcon icon={faCss3Alt} className='text-[#264de4]' />
-              <FontAwesomeIcon icon={faSquareJs} className='text-[#e4cf4b]' />
-              <FontAwesomeIcon icon={faReact} className='text-[#61DBFB]' />
-              <img
-                src='https://p5js.org/assets/img/p5js.svg'
-                alt='p5.js'
-                className='h-8'
-              />
-            </div> */}
             <button className=''>
-              <Link href='/codifeyed'>More Info</Link>
+              <Link href='/codifeyed'>
+                <a>More Info</a>
+              </Link>
             </button>
             <div className='mt-10 grid grid-cols-3-col-grid__expand-three'>
               <a
@@ -140,7 +132,10 @@ export default function MyWork() {
                 target='_blank'
                 rel='noreferrer'
               >
-                <FontAwesomeIcon icon={faGithub} className='w-8 h-8 mr-5' />
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className='w-8 h-8 mr-5 text-portfolio-blue'
+                />
               </a>
               <a
                 href='https://www.linkedin.com/in/daniel-northcott-750107204'
@@ -149,12 +144,13 @@ export default function MyWork() {
               >
                 <FontAwesomeIcon
                   icon={faArrowUpRightFromSquare}
-                  className='w-8 h-8 mr-5'
+                  className='w-8 h-8 mr-5 text-portfolio-blue'
                 />
               </a>
               <div className='spacer'></div>
             </div>
           </div>
+
           <div className='w-[500px] h-[400px]'>
             <Canvas shadows>
               <Suspense fallback={null}>
@@ -166,42 +162,13 @@ export default function MyWork() {
               </Suspense>
             </Canvas>
           </div>
+
           <div className='ml-5'>
             <h2>Portfolio Website</h2>
             <p>
               My personal portfolio website focused on front-end design,
               experimenting with webGL, React Three Fiber and Next.js.
             </p>
-            {/* <div className='mt-5 child:w-12 child:h-10 child:inline-block child:ml-2'>
-              <FontAwesomeIcon icon={faHtml5} className='text-[#f06529]' />
-              <FontAwesomeIcon icon={faCss3Alt} className='text-[#264de4]' />
-              <FontAwesomeIcon icon={faSquareJs} className='text-[#e4cf4b]' />
-              <img
-                src='https://seeklogo.com/images/N/next-js-logo-7929BCD36F-seeklogo.com.png'
-                alt='next.js'
-                className=''
-              />
-              <img
-                src='https://ucarecdn.com/22a0a69b-689f-46c9-866b-57650f31fde9/'
-                alt='three.js'
-                className=''
-              />
-              <img
-                src='https://roughnotation.com/images/fav.png'
-                alt='react rough notation'
-                className=''
-              />
-              <img
-                src='https://pagepro.co/blog/wp-content/uploads/2020/03/framer-motion.png'
-                alt='framer motion'
-                className=''
-              />
-              <img
-                src='https://www.logolynx.com/images/logolynx/63/632150f28960cba513ff90fb97813286.png'
-                alt='blender'
-                className=''
-              />
-            </div> */}
             <button className=''>
               <Link href='/portfolio'>More Info</Link>
             </button>
@@ -211,7 +178,46 @@ export default function MyWork() {
                 target='_blank'
                 rel='noreferrer'
               >
-                <FontAwesomeIcon icon={faGithub} className='w-8 h-8 mr-5' />
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className='w-8 h-8 mr-5 text-portfolio-blue'
+                />
+              </a>
+              <div className='spacer'></div>
+            </div>
+          </div>
+
+          <div className='w-[500px] h-[400px]'>
+            <Canvas shadows>
+              <Suspense fallback={null}>
+                <Scene
+                  monitorGLTFPath={portfolioMonitorGLTFPath}
+                  monitorImgNodeName={portfolioMonitorImgNodeName}
+                  monitorImgMaterialName={portfolioMonitorImgMaterialName}
+                />
+              </Suspense>
+            </Canvas>
+          </div>
+
+          <div className='ml-5'>
+            <h2>Portfolio Website</h2>
+            <p>
+              My personal portfolio website focused on front-end design,
+              experimenting with webGL, React Three Fiber and Next.js.
+            </p>
+            <button className=''>
+              <Link href='/portfolio'>More Info</Link>
+            </button>
+            <div className='mt-10 grid grid-cols-2-col-grid__expand-two'>
+              <a
+                href='https://github.com/Dan2024/CODIFEYED'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className='w-8 h-8 mr-5 text-portfolio-blue'
+                />
               </a>
               <div className='spacer'></div>
             </div>

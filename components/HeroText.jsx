@@ -1,23 +1,19 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { RoughNotation } from 'react-rough-notation'
+import { useInView } from 'react-intersection-observer'
 
 export default function HeroText() {
-  const [state, setState] = useState(false)
-
-  useEffect(() => {
-    setState(true)
-  }, [])
+  const { ref, inView } = useInView()
 
   return (
     <section className='max-w-7xl mx-auto my-11 h-[90vh]'>
       <div className='pt-[25vh]'>
-        <h1 className='mx-auto w-auto mb-5'>
+        <h1 ref={ref} className='mx-auto w-auto mb-5'>
           Hey, I'm{' '}
           <RoughNotation
             type='underline'
-            brackets={['left', 'right']}
             strokeWidth={4}
-            show={state}
+            show={inView}
             animationDelay={500}
             animationDuration={900}
             padding={[-8, 'bottom']}
@@ -32,7 +28,7 @@ export default function HeroText() {
             type='highlight'
             // brackets={['left', 'right']}
             padding={(5)[('left', 'right', 'top', 'bottom')]}
-            show={state}
+            show={inView}
             strokeWidth={2}
             animationDelay={1500}
             animationDuration={1000}

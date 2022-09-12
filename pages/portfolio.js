@@ -5,7 +5,7 @@ export default function portfolio() {
     <div className='bg-white '>
       <div className='divider3'></div>
       <div className='max-w-7xl mx-auto'>
-        <h3 className='my-10 text-4xl'>Key Technologies Used and Why</h3>
+        <h3 className='my-10 text-4xl'>Key Technologies Used</h3>
         <section className='grid grid-cols-key-features-layout gap-5 mx-10 mb-20'>
           <KeyFeatureCard
             imagePath={'/next.js-logo.png'}

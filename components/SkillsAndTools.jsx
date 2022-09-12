@@ -1,4 +1,4 @@
-import DevIcon from 'devicon-react-svg'
+// import DevIcon from 'devicon-react-svg'
 import { PrismaLogo, ExpressLogo, TailwindLogo } from '../public/Logos/logos.js'
 
 const devIconStyle = {
@@ -12,7 +12,7 @@ const iconNames = [
   'css3',
   'javascript',
   'nodejs',
-  'react',
+  // 'react',
   'postgresql',
 ]
 
@@ -34,12 +34,12 @@ export default function SkillsAndTools() {
           </p>
 
           <div className='mx-auto mt-10 grid grid-cols-icons-layout py-10 text-sm gap-8 child:grid child:place-items-center pb-32'>
-            {iconNames.map((iconName, idx) => (
+            {/* {iconNames.map((iconName, idx) => (
               <div key={idx}>
                 <DevIcon icon={iconName} style={devIconStyle} />
                 {iconName.toUpperCase()}
               </div>
-            ))}
+            ))} */}
             <div>
               <PrismaLogo />
               PRISMA

@@ -79,18 +79,22 @@ export default function About() {
 
               {selectedRadioBtn === 'short' && (
                 <p className='font-normal mt-4 '>
-                  An inquisitive, teachable, web-dev bootcamp grad with an eye
-                  for design and a love for bringing both the technical and
-                  visual aspects of a project to life.
+                  I'm an inquisitive, teachable, web-dev bootcamp grad with an{' '}
+                  <span className='highlighted-text'>interest in design</span>{' '}
+                  and a love for bringing both the{' '}
+                  <span className='highlighted-text'>technical</span> and{' '}
+                  <span className='highlighted-text'>visual</span> aspects of a
+                  project to life.
                 </p>
               )}
               {selectedRadioBtn === 'medium' && (
                 <>
                   <p className='font-normal mt-4 '>
                     After leaving a career in science, I embarked on a journey
-                    to learn software engineering where I spent 6 months with{' '}
+                    to learn software engineering where I spent{' '}
+                    <span className='highlighted-text'>6 months</span> with{' '}
                     <a
-                      className='text-[#528998]'
+                      className='text-portfolio-blue underline'
                       target='_blank'
                       rel='noreferrer'
                       href='https://boolean.co.uk/'
@@ -101,9 +105,12 @@ export default function About() {
                     own and I'm now currently learning Next.js and Typescript!
                   </p>
                   <p className='font-normal mt-4 '>
-                    I'm an inquisitive, teachable, web-dev bootcamp grad with an
-                    eye for design and a love for bringing both the technical
-                    and visual aspects of a project to life.
+                    I'm an inquisitive, teachable, web-dev bootcamp grad with an{' '}
+                    <span className='highlighted-text'>interest in design</span>{' '}
+                    and a love for bringing both the{' '}
+                    <span className='highlighted-text'>technical</span> and{' '}
+                    <span className='highlighted-text'>visual</span> aspects of
+                    a project to life.
                   </p>
                 </>
               )}
@@ -111,17 +118,20 @@ export default function About() {
                 <>
                   <p className='font-normal mt-4 '>
                     Noticing that some of the data processing work I conducted
-                    in my science career could benefit from automation, I found
-                    out the world of software engineering could offer the
-                    solutions i needed.
+                    in my science career could benefit from{' '}
+                    <span className='highlighted-text'>automation</span>, I
+                    found out the world of software engineering could offer the{' '}
+                    <span className='highlighted-text'>solutions</span> I
+                    needed.
                   </p>
                   <p className='font-normal mt-4 '>
                     This was great... the problem was i didnt know how to code.
                     Further research, coupled with the desire for a career
                     change, led me to embark on a journey to learn software
-                    engineering where I spent 6 months with{' '}
+                    engineering where I spent{' '}
+                    <span className='highlighted-text'>6 months</span> with{' '}
                     <a
-                      className='text-[#528998]'
+                      className='text-portfolio-blue underline'
                       target='_blank'
                       rel='noreferrer'
                       href='https://boolean.co.uk/'
@@ -133,9 +143,12 @@ export default function About() {
                     Typescript.
                   </p>
                   <p className='font-normal mt-4 '>
-                    I'm an inquisitive, teachable, web-dev bootcamp grad with an
-                    eye for design and a love for bringing both the technical
-                    and visual aspects of a project to life.
+                    I'm an inquisitive, teachable, web-dev bootcamp grad with an{' '}
+                    <span className='highlighted-text'>interest in design</span>{' '}
+                    and a love for bringing both the{' '}
+                    <span className='highlighted-text'>technical</span> and{' '}
+                    <span className='highlighted-text'>visual</span> aspects of
+                    a project to life.
                   </p>
                 </>
               )}

@@ -7,16 +7,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'davys-grey': '#4F5155ff',
-        'blue-sapphire': '#236283ff',
+        'portfolio-blue': '#528998',
         'rich-black': '#000000',
-        'spanish-gray': '#8F8E91ff',
-        'prussian-blue': '#001220',
       },
     },
     gridTemplateColumns: {
       'nav-layout': 'auto 1fr auto',
-      'nav-layout-2': 'repeat(4, 1fr)', // grid-cols-4 bug on tw
+      'nav-layout-2': 'repeat(4, 1fr)',
       'icons-layout': 'repeat(auto-fit, minmax(6rem, 1fr))',
       'key-features-layout': 'repeat(auto-fit, minmax(20rem, 1fr))',
       'hero-layout': '1fr auto',
