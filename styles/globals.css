@@ -60,7 +60,8 @@ html {
   .divider1,
   .divider2,
   .divider3,
-  .divider4 {
+  .divider4,
+  .divider5 {
     aspect-ratio: 1500/150;
     width: 100vw;
     background-repeat: no-repeat;
@@ -79,6 +80,9 @@ html {
   }
   .divider4 {
     background-image: url('/layered-peaks-svgs/lp4.svg');
+  }
+  .divider5 {
+    background-image: url('/layered-peaks-svgs/lp5.svg');
   }
 
   .radio-btn-bio:checked + label {

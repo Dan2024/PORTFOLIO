@@ -55,7 +55,7 @@ export default function SkillsAndTools() {
           </div>
         </div>
       </section>
-      <div className='divider2'></div>
+      <div className='divider2' id='my-work'></div>
     </>
   )
 }

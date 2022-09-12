@@ -4,6 +4,7 @@ import HeroText from '../components/HeroText'
 import MyWork from '../components/myWork'
 import Navbar from '../components/Navbar'
 import SkillsAndTools from '../components/SkillsAndTools'
+import Contact from '../components/Contact'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <About />
       <SkillsAndTools />
       <MyWork />
+      <Contact />
     </div>
   )
 }

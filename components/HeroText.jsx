@@ -19,7 +19,7 @@ export default function HeroText() {
             strokeWidth={4}
             show={state}
             animationDelay={500}
-            animationDuration={1000}
+            animationDuration={900}
             padding={[-8, 'bottom']}
             color='#61a0af'
           >
@@ -34,7 +34,7 @@ export default function HeroText() {
             padding={(5)[('left', 'right', 'top', 'bottom')]}
             show={state}
             strokeWidth={2}
-            animationDelay={1800}
+            animationDelay={1500}
             animationDuration={1000}
             color='#61a0af'
           >

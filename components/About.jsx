@@ -78,15 +78,15 @@ export default function About() {
               </div>
 
               {selectedRadioBtn === 'short' && (
-                <h3 className='font-normal mt-4 '>
+                <p className='font-normal mt-4 '>
                   An inquisitive, teachable, web-dev bootcamp grad with an eye
                   for design and a love for bringing both the technical and
                   visual aspects of a project to life.
-                </h3>
+                </p>
               )}
               {selectedRadioBtn === 'medium' && (
                 <>
-                  <h3 className='font-normal mt-4 '>
+                  <p className='font-normal mt-4 '>
                     After leaving a career in science, I embarked on a journey
                     to learn software engineering where I spent 6 months with{' '}
                     <a
@@ -99,23 +99,23 @@ export default function About() {
                     </a>{' '}
                     . Here I honed my development skills, created projects of my
                     own and I'm now currently learning Next.js and Typescript!
-                  </h3>
-                  <h3 className='font-normal mt-4 '>
+                  </p>
+                  <p className='font-normal mt-4 '>
                     I'm an inquisitive, teachable, web-dev bootcamp grad with an
                     eye for design and a love for bringing both the technical
                     and visual aspects of a project to life.
-                  </h3>
+                  </p>
                 </>
               )}
               {selectedRadioBtn === 'long' && (
                 <>
-                  <h3 className='font-normal mt-4 '>
+                  <p className='font-normal mt-4 '>
                     Noticing that some of the data processing work I conducted
                     in my science career could benefit from automation, I found
                     out the world of software engineering could offer the
                     solutions i needed.
-                  </h3>
-                  <h3 className='font-normal mt-4 '>
+                  </p>
+                  <p className='font-normal mt-4 '>
                     This was great... the problem was i didnt know how to code.
                     Further research, coupled with the desire for a career
                     change, led me to embark on a journey to learn software
@@ -131,12 +131,12 @@ export default function About() {
                     . Throughout this experience i have honed my development
                     skills, and I'm now currently learning Next.js and
                     Typescript.
-                  </h3>
-                  <h3 className='font-normal mt-4 '>
+                  </p>
+                  <p className='font-normal mt-4 '>
                     I'm an inquisitive, teachable, web-dev bootcamp grad with an
                     eye for design and a love for bringing both the technical
                     and visual aspects of a project to life.
-                  </h3>
+                  </p>
                 </>
               )}
 
