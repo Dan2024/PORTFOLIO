@@ -102,8 +102,8 @@ export default function MyWork() {
     <div className='bg-gray-200'>
       <div className='max-w-7xl mx-auto '>
         <h2 className='pb-10'>My Work</h2>
-        <div className='grid grid-cols-2-col-grid__expand-two gap-5'>
-          <div className='w-[500px] h-[400px]'>
+        <div className='md:grid grid-cols-2-col-grid__expand-two gap-5'>
+          <div className='md:w-[500px] md:h-[400px]'>
             <Canvas shadows>
               <Suspense fallback={null}>
                 <Scene
@@ -151,7 +151,7 @@ export default function MyWork() {
             </div>
           </div>
 
-          <div className='w-[500px] h-[400px]'>
+          <div className='md:w-[500px] md:h-[400px]'>
             <Canvas shadows>
               <Suspense fallback={null}>
                 <Scene
@@ -187,7 +187,7 @@ export default function MyWork() {
             </div>
           </div>
 
-          <div className='w-[500px] h-[400px]'>
+          <div className='md:w-[500px] md:h-[400px]'>
             <Canvas shadows>
               <Suspense fallback={null}>
                 <Scene

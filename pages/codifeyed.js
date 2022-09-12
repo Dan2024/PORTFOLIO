@@ -8,7 +8,7 @@ export default function Codifeyed() {
       <div className='max-w-7xl mx-auto'>
         <h3 className='my-10 text-4xl'>Case Study</h3>
         <section className=' child:shadow-2xl child:rounded-xl  child:my-10'>
-          <div className='grid grid-cols-hero-layout '>
+          <div className='md:grid grid-cols-hero-layout '>
             <div className='p-5 child:pb-10'>
               <h3>Sorting Algorithms</h3>
               <p>
@@ -45,7 +45,7 @@ export default function Codifeyed() {
             </div>
             <div
               className={
-                'aspect-[100/74] h-[350px] rounded-t-lg relative overflow-hidden rounded-r-xl place-self-center'
+                'aspect-[100/74] h-[200px] md:h-[350px] rounded-t-lg relative overflow-hidden rounded-r-xl place-self-center'
               }
             >
               <Image
@@ -56,10 +56,10 @@ export default function Codifeyed() {
               />
             </div>
           </div>
-          <div className='grid grid-cols-2-col-grid__expand-two'>
+          <div className='md:grid grid-cols-2-col-grid__expand-two'>
             <div
               className={
-                'aspect-[100/74] h-[350px] rounded-t-lg relative overflow-hidden rounded-l-xl place-self-center'
+                'aspect-[100/74] h-[200px] md:h-[350px] rounded-t-lg relative overflow-hidden rounded-l-xl place-self-center'
               }
             >
               <Image
@@ -97,7 +97,7 @@ export default function Codifeyed() {
               </p>
             </div>
           </div>
-          <div className='grid grid-cols-hero-layout'>
+          <div className='md:grid grid-cols-hero-layout'>
             <div className='p-5 child:pb-5'>
               <h3>Codifying Mathematical Formulas</h3>
               <p>
@@ -117,7 +117,7 @@ export default function Codifeyed() {
             </div>
             <div
               className={
-                'aspect-[100/74] h-[350px] rounded-t-lg relative overflow-hidden rounded-r-xl place-self-center'
+                'aspect-[100/74] h-[200px] md:h-[350px] rounded-t-lg relative overflow-hidden rounded-r-xl place-self-center'
               }
             >
               <Image
@@ -152,32 +152,5 @@ export default function Codifeyed() {
       </div>
       <div className='divider4'></div>
     </div>
-    // <>
-    //   <div className='max-w-7xl mx-auto'>
-    //     <h2>What Is It?</h2>
-    //     <p>
-    //       A Front-End website that visualizes computer science topics, such as
-    //       sorting algorithms and reccursion.
-    //     </p>
-    //     <h2>Why Did I Make It?</h2>
-    //     <p>
-    //       I had to do a final project at the end of my bootcamp and i saw this
-    //       as an oportunity to learn some of the computer science topics that
-    //       were only briefly covered there. Through this project I gained a much
-    //       better understanding of Big O Notation and why some algorithms are
-    //       generally more efficient, but each have their own pros and cons
-    //       depending on the situation. I also became a lot more confident with
-    //       reccursive functions and they're no longer as intimidating to me as
-    //       they once were. I'm continuing to learn about different data
-    //       structures and algorithms in my own time with the help of Udemy and
-    //       Leetcode so that i can become a more complete developer for the next
-    //       company I work for. I used <a href=''>The Coding Train's Channel</a>{' '}
-    //       as a large source of inspiration and learning for each section. Once I
-    //       felt I had learnt enough I extended his projects as much as I could in
-    //       the 2 weeks we had to complete our final project to really make them
-    //       my own.
-    //     </p>
-    //   </div>
-    // </>
   )
 }

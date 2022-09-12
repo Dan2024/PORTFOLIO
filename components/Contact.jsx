@@ -14,7 +14,7 @@ export default function Contact() {
         <div className='max-w-7xl mx-auto text-white child:pb-10'>
           <h2 className='pt-10'>Contact</h2>
           <div className='grid grid-cols-key-features-layout gap-5 mt-10 mx-10 child:grid child:place-content-center'>
-            <div className='hover:bg- bg-[#181a1d] hover:bg-[#2e3137] h-52 rounded-xl px-4 text-center'>
+            <div className='hover:bg- bg-[#181a1d] hover:bg-[#2e3137] h-60 rounded-xl px-4 text-center'>
               <h3 className='font-normal'>
                 Interested in{' '}
                 <RoughNotation
@@ -35,13 +35,13 @@ export default function Contact() {
               >
                 <FontAwesomeIcon
                   icon={faLinkedin}
-                  className='w-8 h-8 mx-auto mt-16 text-[#707274]'
+                  className='w-8 h-8 mx-auto mt-8 md:mt-16 text-[#707274]'
                 />
               </a>
             </div>
-            <div className='hover:bg- bg-[#181a1d] hover:bg-[#2e3137] h-52 rounded-xl px-4 text-center'>
+            <div className='hover:bg- bg-[#181a1d] hover:bg-[#2e3137] h-60 rounded-xl px-4 text-center'>
               <h3 className='font-normal'>
-                Want to offer advice on how I can{' '}
+                Have tips on how I can{' '}
                 <RoughNotation
                   type='underline'
                   show={inView}
@@ -59,11 +59,11 @@ export default function Contact() {
               >
                 <FontAwesomeIcon
                   icon={faGithub}
-                  className='w-8 h-8 mx-auto mt-16 text-[#707274]'
+                  className='w-8 h-8 mx-auto mt-8 md:mt-16 text-[#707274]'
                 />
               </a>
             </div>
-            <div className=' bg-[#181a1d] hover:bg-[#2e3137] h-52 rounded-xl px-4 text-center'>
+            <div className=' bg-[#181a1d] hover:bg-[#2e3137] h-60 rounded-xl px-4 text-center'>
               <h3 className='font-normal'>
                 <RoughNotation
                   type='bracket'
@@ -83,7 +83,7 @@ export default function Contact() {
               >
                 <FontAwesomeIcon
                   icon={faFileLines}
-                  className='w-8 h-8 mx-auto mt-16 text-[#707274]'
+                  className='w-8 h-8 mx-auto mt-8 md:mt-16 text-[#707274]'
                 />
               </a>
             </div>

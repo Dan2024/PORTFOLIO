@@ -13,11 +13,11 @@ export default function About() {
   return (
     <>
       <div className='bg-gray-200' id='about'>
-        <section className='max-w-7xl mx-auto h-[700px]'>
+        <section className='max-w-7xl mx-auto '>
           <h2 className='pt-20'>About</h2>
 
-          <div className='grid grid-cols-2-col-grid__expand-two gap-20 pt-16'>
-            <div className='w-96 h-96 relative rounded-full overflow-hidden'>
+          <div className='md:grid grid-cols-2-col-grid__expand-two gap-20 pt-16'>
+            <div className='w-72 h-72 mx-auto md:w-96 md:h-96 relative rounded-full overflow-hidden'>
               <Image
                 src='/portrait.png'
                 alt='Edited picture of me'
@@ -39,7 +39,7 @@ export default function About() {
                 />
                 <label
                   htmlFor='short-bio'
-                  className='w-32 inline-block text-center py-2 uppercase mr-5 rounded-lg bg-rich-black text-white cursor-pointer transition duration-150 ease-out hover:ease-in'
+                  className='w-32 md:inline-block text-center py-2 uppercase my-2 mx-auto block md:mr-5 rounded-lg bg-rich-black text-white cursor-pointer transition duration-150 ease-out hover:ease-in'
                 >
                   <span>Short</span>
                 </label>
@@ -55,7 +55,7 @@ export default function About() {
                 />
                 <label
                   htmlFor='medium-bio'
-                  className='w-32 inline-block text-center py-2 uppercase mr-5 rounded-lg bg-rich-black text-white cursor-pointer transition duration-150 ease-out hover:ease-in'
+                  className='w-32 md:inline-block text-center py-2 uppercase my-2 mx-auto block md:mr-5 rounded-lg bg-rich-black text-white cursor-pointer transition duration-150 ease-out hover:ease-in'
                 >
                   <span>Medium</span>
                 </label>
@@ -71,7 +71,7 @@ export default function About() {
                 />
                 <label
                   htmlFor='long-bio'
-                  className='w-32 inline-block text-center py-2 uppercase mr-5 rounded-lg bg-rich-black text-white cursor-pointer transition duration-150 ease-out hover:ease-in'
+                  className='w-32 md:inline-block text-center py-2 uppercase my-2 mx-auto block md:mr-5 rounded-lg bg-rich-black text-white cursor-pointer transition duration-150 ease-out hover:ease-in'
                 >
                   <span>Long</span>
                 </label>
@@ -161,7 +161,7 @@ export default function About() {
                 >
                   <FontAwesomeIcon
                     icon={faLinkedin}
-                    className='w-10 h-10 mr-5'
+                    className='w-10 h-10 mx-5 md:mr-5 md:ml-0'
                   />
                 </a>
                 <a

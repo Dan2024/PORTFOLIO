@@ -20,12 +20,12 @@ html {
   h5,
   h6 {
     /* have to bold it bc of tailwind */
-    @apply font-bold;
+    @apply font-bold px-2;
   }
 
   h1 {
     /* for responsiveness - tw starts mobile first */
-    @apply text-7xl sm:text-5xl md:text-7xl;
+    @apply text-5xl md:text-7xl;
   }
 
   h2 {
@@ -38,6 +38,10 @@ html {
 
   li {
     @apply cursor-pointer;
+  }
+
+  p {
+    @apply px-3;
   }
 
   button {
