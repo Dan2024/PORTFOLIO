@@ -7,7 +7,7 @@ export default function Codifeyed() {
       <div className='divider3'></div>
       <div className='max-w-7xl mx-auto'>
         <h3 className='my-10 text-4xl'>Case Study</h3>
-        <section className=' child:shadow-2xl child:rounded-xl  child:my-10'>
+        <section className=' child:shadow-2xl child:rounded-xl child:my-10 child:mx-5'>
           <div className='md:grid grid-cols-hero-layout '>
             <div className='p-5 child:pb-10'>
               <h3>Sorting Algorithms</h3>
@@ -45,7 +45,7 @@ export default function Codifeyed() {
             </div>
             <div
               className={
-                'aspect-[100/74] h-[200px] md:h-[350px] rounded-t-lg relative overflow-hidden rounded-r-xl place-self-center'
+                'mx-auto w-full aspect-[100/74] sm:h-[350px] rounded-t-lg relative overflow-hidden rounded-r-xl place-self-center'
               }
             >
               <Image
@@ -56,22 +56,10 @@ export default function Codifeyed() {
               />
             </div>
           </div>
-          <div className='md:grid grid-cols-2-col-grid__expand-two'>
-            <div
-              className={
-                'aspect-[100/74] h-[200px] md:h-[350px] rounded-t-lg relative overflow-hidden rounded-l-xl place-self-center'
-              }
-            >
-              <Image
-                src={'/codifeyed-gifs/fractals.gif'}
-                alt={'Fractal forest demonstration gif'}
-                layout='fill'
-                objectFit='cover'
-              />
-            </div>
-            <div className='p-5 child:pb-5'>
-              <h3>Recursive Functions</h3>
 
+          <div className='md:grid grid-cols-2-col-grid__expand-two'>
+            <div className='p-5 child:pb-5 col-start-2'>
+              <h3>Recursive Functions</h3>
               <p>
                 I explored the Fractal Trees to learn about recursive functions
                 (... and because i thought they looked really cool). Using this{' '}
@@ -96,7 +84,20 @@ export default function Codifeyed() {
                 codify.
               </p>
             </div>
+            <div
+              className={
+                'mx-auto w-full aspect-[100/74] sm:h-[350px] rounded-t-lg relative overflow-hidden rounded-l-xl place-self-center row-start-1'
+              }
+            >
+              <Image
+                src={'/codifeyed-gifs/fractals.gif'}
+                alt={'Fractal forest demonstration gif'}
+                layout='fill'
+                objectFit='cover'
+              />
+            </div>
           </div>
+
           <div className='md:grid grid-cols-hero-layout'>
             <div className='p-5 child:pb-5'>
               <h3>Codifying Mathematical Formulas</h3>
@@ -117,7 +118,7 @@ export default function Codifeyed() {
             </div>
             <div
               className={
-                'aspect-[100/74] h-[200px] md:h-[350px] rounded-t-lg relative overflow-hidden rounded-r-xl place-self-center'
+                'mx-auto w-full aspect-[100/74] sm:h-[350px] rounded-t-lg relative overflow-hidden rounded-r-xl place-self-center'
               }
             >
               <Image
