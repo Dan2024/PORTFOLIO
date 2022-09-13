@@ -1,16 +1,8 @@
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
 import { useFrame, Canvas } from '@react-three/fiber'
-import { useEffect, useRef, Suspense, useState } from 'react'
+import { useRef, Suspense } from 'react'
 import { useGLTF } from '@react-three/drei'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-import {
-  faLinkedin,
-  faGithub,
-  faReact,
-  faSquareJs,
-  faCss3Alt,
-  faHtml5,
-} from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
