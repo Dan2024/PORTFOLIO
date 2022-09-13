@@ -39,7 +39,7 @@ export default function About() {
                 />
                 <label
                   htmlFor='short-bio'
-                  className='w-32 md:inline-block text-center py-2 uppercase my-2 mx-auto block md:mr-5 rounded-lg bg-rich-black text-white cursor-pointer transition duration-150 ease-out hover:ease-in'
+                  className='w-[80%] md:w-32 md:inline-block text-center py-2 uppercase my-2 mx-auto block md:mr-5 rounded-lg bg-rich-black text-white cursor-pointer transition duration-150 ease-out hover:ease-in'
                 >
                   <span>Short</span>
                 </label>
@@ -55,7 +55,7 @@ export default function About() {
                 />
                 <label
                   htmlFor='medium-bio'
-                  className='w-32 md:inline-block text-center py-2 uppercase my-2 mx-auto block md:mr-5 rounded-lg bg-rich-black text-white cursor-pointer transition duration-150 ease-out hover:ease-in'
+                  className='w-[80%] md:w-32 md:inline-block text-center py-2 uppercase my-2 mx-auto block md:mr-5 rounded-lg bg-rich-black text-white cursor-pointer transition duration-150 ease-out hover:ease-in'
                 >
                   <span>Medium</span>
                 </label>
@@ -71,7 +71,7 @@ export default function About() {
                 />
                 <label
                   htmlFor='long-bio'
-                  className='w-32 md:inline-block text-center py-2 uppercase my-2 mx-auto block md:mr-5 rounded-lg bg-rich-black text-white cursor-pointer transition duration-150 ease-out hover:ease-in'
+                  className='w-[80%] md:w-32 md:inline-block text-center py-2 uppercase my-2 mx-auto block md:mr-5 rounded-lg bg-rich-black text-white cursor-pointer transition duration-150 ease-out hover:ease-in'
                 >
                   <span>Long</span>
                 </label>
