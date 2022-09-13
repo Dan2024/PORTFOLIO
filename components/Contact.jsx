@@ -15,7 +15,7 @@ export default function Contact() {
           <h2 className='pt-10'>Contact</h2>
           <div className='grid grid-cols-key-features-layout gap-5 mt-10 mx-10 child:grid child:place-content-center'>
             <div className='hover:bg- bg-[#181a1d] hover:bg-[#2e3137] h-60 rounded-xl px-4 text-center'>
-              <h3 className='font-normal'>
+              <h3 className='font-normal px-10 md:px-0'>
                 Interested in{' '}
                 <RoughNotation
                   type='box'
