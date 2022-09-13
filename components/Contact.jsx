@@ -77,6 +77,7 @@ export default function Contact() {
                 </RoughNotation>
               </h3>
               <a
+                // TODO: change to cv link when cv updated
                 href='https://www.linkedin.com/in/daniel-northcott-750107204'
                 target='_blank'
                 rel='noreferrer'

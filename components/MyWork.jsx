@@ -179,7 +179,7 @@ export default function MyWork() {
             </div>
           </div>
 
-          <div className='w-[300px] h-[200px] xxs:w-[400px] xxs:h-[300px] xs:w-[500px] xs:h-[400px] mx-auto'>
+          <div className='w-[300px] h-[200px] xxs:w-[400px] xxs:h-[300px] xs:w-[500px] xs:h-[400px] mx-auto blur'>
             <Canvas shadows>
               <Suspense fallback={null}>
                 <Scene
@@ -192,25 +192,15 @@ export default function MyWork() {
           </div>
 
           <div className='ml-5'>
-            <h2>Portfolio Website</h2>
-            <p>
-              My personal portfolio website focused on front-end design,
-              experimenting with webGL, React Three Fiber and Next.js.
-            </p>
-            <button className=''>
-              <Link href='/portfolio'>More Info</Link>
-            </button>
-            <div className='mt-10 grid grid-cols-2-col-grid__expand-two'>
-              <a
-                href='https://github.com/Dan2024/CODIFEYED'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className='w-8 h-8 mr-5 text-portfolio-blue'
-                />
-              </a>
+            <h2>Web-Dev Quiz App</h2>
+            <p className='text-portfolio-blue italic'>coming soon...</p>
+            <button className='blur-sm'>More Info</button>
+            <div className='mt-10 grid grid-cols-2-col-grid__expand-two blur-sm'>
+              <FontAwesomeIcon
+                icon={faGithub}
+                className='w-8 h-8 mr-5 text-portfolio-blue'
+              />
+
               <div className='spacer'></div>
             </div>
           </div>
