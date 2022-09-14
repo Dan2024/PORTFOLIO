@@ -166,7 +166,7 @@ export default function MyWork() {
             </button>
             <div className='mt-10 grid grid-cols-2-col-grid__expand-two'>
               <a
-                href='https://github.com/Dan2024/CODIFEYED'
+                href='https://github.com/Dan2024/PORTFOLIO'
                 target='_blank'
                 rel='noreferrer'
               >

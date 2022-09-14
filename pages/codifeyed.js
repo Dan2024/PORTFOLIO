@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import KeyFeatureCard from '/components/KeyFeatureCards.jsx'
 
 export default function Codifeyed() {
@@ -7,6 +8,9 @@ export default function Codifeyed() {
       <div className='divider3'></div>
       <div className='max-w-7xl mx-auto'>
         <h3 className='my-10 text-4xl'>Case Study</h3>
+        <span className='text-portfolio-blue ml-3 underline'>
+          <Link href='/#my-work'>Back</Link>
+        </span>
         <section className=' child:shadow-2xl child:rounded-xl child:my-10 child:mx-5'>
           <div className='md:grid grid-cols-hero-layout '>
             <div className='p-5 child:pb-10'>
