@@ -18,6 +18,7 @@ export default function portfolio() {
               <p>
                 <a
                   target='_blank'
+                  rel='noreferrer'
                   className='text-[#528998] underline'
                   href='https://nextjs.org/'
                 >
@@ -39,6 +40,7 @@ export default function portfolio() {
                 The reasoning for{' '}
                 <a
                   target='_blank'
+                  rel='noreferrer'
                   className='text-[#528998] underline'
                   href='https://tailwindcss.com/'
                 >
@@ -59,6 +61,7 @@ export default function portfolio() {
                 were made using the{' '}
                 <a
                   target='_blank'
+                  rel='noreferrer'
                   className='text-[#528998] underline'
                   href='https://threejs.org/'
                 >
@@ -72,6 +75,7 @@ export default function portfolio() {
                 <a
                   className='text-[#528998] underline'
                   target='_blank'
+                  rel='noreferrer'
                   href='https://github.com/pmndrs/react-three-fiber'
                 >
                   React Three Fiber
@@ -89,6 +93,7 @@ export default function portfolio() {
                 <a
                   className='text-[#528998] underline'
                   target='_blank'
+                  rel='noreferrer'
                   href='https://github.com/pmndrs/gltfjsx'
                 >
                   GLTFJSX
@@ -128,6 +133,7 @@ export default function portfolio() {
                   className='text-[#528998] underline'
                   href='https://roughnotation.com/'
                   target='_blank'
+                  rel='noreferrer'
                 >
                   Rough Notation
                 </a>{' '}
@@ -136,6 +142,7 @@ export default function portfolio() {
                 <a
                   className='text-[#528998] underline'
                   target='_blank'
+                  rel='noreferrer'
                   href='https://github.com/thebuilder/react-intersection-observer'
                 >
                   React Intersection Observer
@@ -143,18 +150,19 @@ export default function portfolio() {
                 allowed me to trigger these subtle animations whenever a certain
                 element was visible to the user.
               </p>
-              <p>
+              {/* <p>
                 I also used{' '}
                 <a
                   className='text-[#528998] underline'
                   target='_blank'
+                  rel='noreferrer'
                   href='https://www.framer.com/motion/'
                 >
                   Framer Motion
                 </a>{' '}
                 to animate the page transitions when the user is taken to a new
                 page.
-              </p>
+              </p> */}
             </div>
           </div>
         </section>
@@ -167,11 +175,11 @@ export default function portfolio() {
             keyFeatureCardTitle={'Next.js'}
           />
 
-          <KeyFeatureCard
+          {/* <KeyFeatureCard
             imagePath={'/framer-motion-logo.png'}
             imageAlt={'Framer Motion logo'}
             keyFeatureCardTitle={'Framer Motion'}
-          />
+          /> */}
 
           <KeyFeatureCard
             imagePath={'/rough-notation-logo.png'}
