@@ -2,7 +2,7 @@ import Image from 'next/image'
 import KeyFeatureCard from '/components/KeyFeatureCards.jsx'
 import Link from 'next/link'
 
-export default function portfolio() {
+export default function Portfolio() {
   return (
     <div className='bg-white '>
       <div className='divider3'></div>
