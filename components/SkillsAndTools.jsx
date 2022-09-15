@@ -11,7 +11,7 @@ import {
   ExpressLogo,
   TailwindLogo,
   PostGreSQLLogo,
-} from '../public/Logos/logos.js'
+} from '../public/logos/Logos'
 
 export default function SkillsAndTools() {
   return (
