@@ -130,7 +130,7 @@ export default function MyWork() {
                 />
               </a>
               <a
-                href='https://www.linkedin.com/in/daniel-northcott-750107204'
+                href='https://codifeyed.vercel.app/'
                 target='_blank'
                 rel='noreferrer'
               >
