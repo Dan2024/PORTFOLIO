@@ -32,7 +32,7 @@ export default function SkillsAndTools() {
 
           <div className='mx-auto mt-10 grid grid-cols-icons-layout py-10 px-2 text-sm gap-8 child:grid child:place-items-center pb-32'>
             <div>
-              <FontAwesomeIcon icon={faHtml5} className='px-6 h-[64px] py-1' />
+              <FontAwesomeIcon icon={faHtml5} className='px-6 h-[64px] ' />
               HTML
             </div>
             <div>
