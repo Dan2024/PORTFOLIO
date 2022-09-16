@@ -32,23 +32,23 @@ export default function SkillsAndTools() {
 
           <div className='mx-auto mt-10 grid grid-cols-icons-layout py-10 px-2 text-sm gap-8 child:grid child:place-items-center pb-32'>
             <div>
-              <FontAwesomeIcon icon={faHtml5} className='px-6' />
+              <FontAwesomeIcon icon={faHtml5} className='px-6 h-[64px]' />
               HTML
             </div>
             <div>
-              <FontAwesomeIcon icon={faCss3} className='px-6 py-2' />
+              <FontAwesomeIcon icon={faCss3} className='px-6 h-[64px] py-2' />
               CSS
             </div>
             <div>
-              <FontAwesomeIcon icon={faJsSquare} className='px-6' />
+              <FontAwesomeIcon icon={faJsSquare} className='px-6 h-[64px]' />
               JAVASCRIPT
             </div>
             <div>
-              <FontAwesomeIcon icon={faReact} className='px-6' />
+              <FontAwesomeIcon icon={faReact} className='px-6 h-[64px]' />
               REACT
             </div>
             <div>
-              <FontAwesomeIcon icon={faNodeJs} className='px-6' />
+              <FontAwesomeIcon icon={faNodeJs} className='px-6 h-[64px]' />
               NODE.JS
             </div>
             <div>
