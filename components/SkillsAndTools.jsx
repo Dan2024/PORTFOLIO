@@ -32,7 +32,7 @@ export default function SkillsAndTools() {
 
           <div className='mx-auto mt-10 grid grid-cols-icons-layout py-10 px-2 text-sm gap-8 child:grid child:place-items-center pb-32'>
             <div>
-              <FontAwesomeIcon icon={faHtml5} className='px-6 h-[64px]' />
+              <FontAwesomeIcon icon={faHtml5} className='px-6 h-[64px] py-1' />
               HTML
             </div>
             <div>
@@ -40,15 +40,18 @@ export default function SkillsAndTools() {
               CSS
             </div>
             <div>
-              <FontAwesomeIcon icon={faJsSquare} className='px-6 h-[64px]' />
+              <FontAwesomeIcon
+                icon={faJsSquare}
+                className='px-6 h-[64px] py-1'
+              />
               JAVASCRIPT
             </div>
             <div>
-              <FontAwesomeIcon icon={faReact} className='px-6 h-[64px]' />
+              <FontAwesomeIcon icon={faReact} className='px-6 h-[64px] py-1' />
               REACT
             </div>
             <div>
-              <FontAwesomeIcon icon={faNodeJs} className='px-6 h-[64px]' />
+              <FontAwesomeIcon icon={faNodeJs} className='px-6 h-[64px] py-1' />
               NODE.JS
             </div>
             <div>
