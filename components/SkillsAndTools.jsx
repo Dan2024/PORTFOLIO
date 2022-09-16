@@ -63,7 +63,7 @@ export default function SkillsAndTools() {
               <PrismaLogo />
               PRISMA
             </div>
-            <div className='z-10'>
+            <div>
               <PostGreSQLLogo />
               POSTGRESQL
             </div>

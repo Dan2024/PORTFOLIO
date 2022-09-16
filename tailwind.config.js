@@ -29,7 +29,7 @@ module.exports = {
     gridTemplateColumns: {
       'nav-layout': 'auto 1fr auto',
       'nav-layout-2': 'repeat(4, 1fr)',
-      'icons-layout': 'repeat(auto-fit, minmax(6rem, 1fr))',
+      'icons-layout': 'repeat(auto-fit, minmax(7rem, 1fr))',
       'key-features-layout': 'repeat(auto-fit, minmax(15rem, 1fr))',
       'hero-layout': '1fr auto',
       '2-col-grid__expand-two': 'auto 1fr',
