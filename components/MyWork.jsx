@@ -4,8 +4,7 @@ import { useRef, Suspense } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
-import Link from 'next/link'
+import MyWorkInfoText from './MyWorkInfoText'
 
 const angleToRadians = (angleInDeg) => (Math.PI / 180) * angleInDeg
 
@@ -94,7 +93,8 @@ export default function MyWork() {
     <div className='bg-gray-200'>
       <div className='max-w-7xl mx-auto '>
         <h2 className='pb-10'>My Work</h2>
-        <div className='md:grid grid-cols-2-col-grid__expand-two gap-5'>
+
+        <section className='md:grid grid-cols-2-col-grid__expand-two gap-5'>
           <div className='w-[300px] h-[200px] xxs:w-[400px] xxs:h-[300px] xs:w-[500px] xs:h-[400px] mx-auto'>
             <Canvas shadows>
               <Suspense fallback={null}>
@@ -107,41 +107,15 @@ export default function MyWork() {
             </Canvas>
           </div>
 
-          <div className='ml-5'>
-            <h2>CODIFEYED</h2>
-            <p>
-              A Front-End website that visualizes computer science topics, such
-              as sorting algorithms and reccursion.
-            </p>
-            <button className=''>
-              <Link href='/codifeyed'>
-                <a>More Info</a>
-              </Link>
-            </button>
-            <div className='mt-10 grid grid-cols-3-col-grid__expand-three'>
-              <a
-                href='https://github.com/Dan2024/CODIFEYED'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className='w-8 h-8 mr-5 text-portfolio-blue'
-                />
-              </a>
-              <a
-                href='https://codifeyed.vercel.app/'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <FontAwesomeIcon
-                  icon={faArrowUpRightFromSquare}
-                  className='w-8 h-8 mr-5 text-portfolio-blue'
-                />
-              </a>
-              <div className='spacer'></div>
-            </div>
-          </div>
+          <MyWorkInfoText
+            title={'CODIFEYED'}
+            summary={
+              'A Front-End website that visualizes computer science topics, such as sorting algorithms and reccursion.'
+            }
+            pageUrl={'/codifeyed'}
+            githubProjectLink={'https://github.com/Dan2024/CODIFEYED'}
+            liveWebsiteLink={'https://codifeyed.vercel.app/'}
+          />
 
           <div className='w-[300px] h-[200px] xxs:w-[400px] xxs:h-[300px] xs:w-[500px] xs:h-[400px] mx-auto'>
             <Canvas shadows>
@@ -155,29 +129,14 @@ export default function MyWork() {
             </Canvas>
           </div>
 
-          <div className='ml-5'>
-            <h2>Portfolio Website</h2>
-            <p>
-              My personal portfolio website focused on front-end design,
-              experimenting with webGL, React Three Fiber and Next.js.
-            </p>
-            <button className=''>
-              <Link href='/portfolio'>More Info</Link>
-            </button>
-            <div className='mt-10 grid grid-cols-2-col-grid__expand-two'>
-              <a
-                href='https://github.com/Dan2024/PORTFOLIO'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className='w-8 h-8 mr-5 text-portfolio-blue'
-                />
-              </a>
-              <div className='spacer'></div>
-            </div>
-          </div>
+          <MyWorkInfoText
+            title={'Portfolio Website'}
+            summary={
+              'My personal portfolio website focused on front-end design, experimenting with webGL, React Three Fiber and Next.js.'
+            }
+            pageUrl={'/portfolio'}
+            githubProjectLink={'https://github.com/Dan2024/PORTFOLIO'}
+          />
 
           <div className='w-[300px] h-[200px] xxs:w-[400px] xxs:h-[300px] xs:w-[500px] xs:h-[400px] mx-auto blur'>
             <Canvas shadows>
@@ -204,7 +163,7 @@ export default function MyWork() {
               <div className='spacer'></div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   )
