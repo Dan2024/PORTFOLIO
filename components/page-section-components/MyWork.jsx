@@ -95,7 +95,7 @@ export default function MyWork() {
         <h2 className='pb-10'>My Work</h2>
 
         <section className='md:grid grid-cols-2-col-grid__expand-two gap-5'>
-          <div className='w-[300px] h-[200px] xxs:w-[400px] xxs:h-[300px] xs:w-[500px] xs:h-[400px] mx-auto'>
+          <aside className='w-[300px] h-[200px] xxs:w-[400px] xxs:h-[300px] xs:w-[500px] xs:h-[400px] mx-auto'>
             <Canvas shadows>
               <Suspense fallback={null}>
                 <Scene
@@ -105,7 +105,7 @@ export default function MyWork() {
                 />
               </Suspense>
             </Canvas>
-          </div>
+          </aside>
 
           <MyWorkInfoText
             title={'CODIFEYED'}
@@ -117,7 +117,7 @@ export default function MyWork() {
             liveWebsiteLink={'https://codifeyed.vercel.app/'}
           />
 
-          <div className='w-[300px] h-[200px] xxs:w-[400px] xxs:h-[300px] xs:w-[500px] xs:h-[400px] mx-auto'>
+          <aside className='w-[300px] h-[200px] xxs:w-[400px] xxs:h-[300px] xs:w-[500px] xs:h-[400px] mx-auto'>
             <Canvas shadows>
               <Suspense fallback={null}>
                 <Scene
@@ -127,7 +127,7 @@ export default function MyWork() {
                 />
               </Suspense>
             </Canvas>
-          </div>
+          </aside>
 
           <MyWorkInfoText
             title={'Portfolio Website'}
@@ -138,7 +138,7 @@ export default function MyWork() {
             githubProjectLink={'https://github.com/Dan2024/PORTFOLIO'}
           />
 
-          <div className='w-[300px] h-[200px] xxs:w-[400px] xxs:h-[300px] xs:w-[500px] xs:h-[400px] mx-auto blur'>
+          <aside className='w-[300px] h-[200px] xxs:w-[400px] xxs:h-[300px] xs:w-[500px] xs:h-[400px] mx-auto blur'>
             <Canvas shadows>
               <Suspense fallback={null}>
                 <Scene
@@ -148,7 +148,7 @@ export default function MyWork() {
                 />
               </Suspense>
             </Canvas>
-          </div>
+          </aside>
 
           <div className='ml-5'>
             <h2>Web-Dev Quiz App</h2>

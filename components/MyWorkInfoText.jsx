@@ -11,7 +11,7 @@ export default function MyWorkInfoText({
   liveWebsiteLink,
 }) {
   return (
-    <div className='ml-5'>
+    <section className='ml-5'>
       <h2>{title}</h2>
       <p>{summary}</p>
       <button>
@@ -36,6 +36,6 @@ export default function MyWorkInfoText({
         )}
         <div className='spacer'></div>
       </div>
-    </div>
+    </section>
   )
 }

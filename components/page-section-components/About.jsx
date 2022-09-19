@@ -78,6 +78,7 @@ export default function About() {
                 </label>
               </div>
 
+              {/* conditionally rendered bio text */}
               {selectedRadioBtn === 'short' && (
                 <p className='font-normal mt-4 '>
                   I'm an inquisitive, teachable, web-dev bootcamp grad with an{' '}

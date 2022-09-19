@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className='sticky top-0 w-full shadow-xl z-[100] bg-[#ecf0f3]'>
+      <header className='sticky top-0 w-full shadow-xl z-[100] bg-[#ecf0f3]'>
         <nav className='max-w-7xl grid grid-cols-nav-layout mx-auto py-5'>
           <h2 className='text-2xl xs:text-3xl'>
             <Link href='/'>Daniel Northcott</Link>
@@ -46,7 +46,7 @@ export default function Navbar() {
 
           {navStatus && <NavbarMobileMenu handleNavStatus={handleNavStatus} />}
         </nav>
-      </div>
+      </header>
     </>
   )
 }
