@@ -1,8 +1,6 @@
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
-import { RoughNotation } from 'react-rough-notation'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { useState } from 'react'
+import PersonalLinks from '../components/PersonalLinks'
 
 export default function About() {
   const [selectedRadioBtn, setSelectedRadioBtn] = useState('short')
@@ -13,10 +11,10 @@ export default function About() {
   return (
     <>
       <div className='bg-gray-200' id='about'>
-        <section className='max-w-7xl mx-auto '>
+        <div className='max-w-7xl mx-auto '>
           <h2 className='pt-20'>About</h2>
 
-          <div className='md:grid grid-cols-2-col-grid__expand-two gap-20 pt-16'>
+          <section className='md:grid grid-cols-2-col-grid__expand-two gap-20 pt-16'>
             <div className='w-72 h-72 mx-auto md:w-96 md:h-96 relative rounded-full overflow-hidden'>
               <Image
                 src='/portrait.png'
@@ -28,6 +26,7 @@ export default function About() {
             </div>
             <div className='relative'>
               <div className='mb-10'>
+                {/* small radio button */}
                 <input
                   type='radio'
                   id='short-bio'
@@ -44,6 +43,7 @@ export default function About() {
                   <span>Short</span>
                 </label>
 
+                {/* medium radio button */}
                 <input
                   type='radio'
                   id='medium-bio'
@@ -60,6 +60,7 @@ export default function About() {
                   <span>Medium</span>
                 </label>
 
+                {/* large radio button */}
                 <input
                   type='radio'
                   id='long-bio'
@@ -153,29 +154,10 @@ export default function About() {
                 </>
               )}
 
-              <div className='mt-10 grid grid-cols-3-col-grid__expand-three'>
-                <a
-                  href='https://www.linkedin.com/in/daniel-northcott-750107204'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <FontAwesomeIcon
-                    icon={faLinkedin}
-                    className='w-10 h-10 mx-5 md:mr-5 md:ml-0'
-                  />
-                </a>
-                <a
-                  href='https://github.com/Dan2024'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <FontAwesomeIcon icon={faGithub} className='h-10' />
-                </a>
-                <div className='spacer'></div>
-              </div>
+              <PersonalLinks />
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </>
   )
