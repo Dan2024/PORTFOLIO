@@ -83,6 +83,12 @@ html {
   .divider2 {
     background-image: url('/layered-peaks-svgs/lp2.svg');
   }
+  @media only screen and (max-width: 600px) {
+    .divider2,
+    .divider1 {
+      aspect-ratio: 1000/250;
+    }
+  }
   .divider3 {
     background-image: url('/layered-peaks-svgs/lp3.svg');
   }
