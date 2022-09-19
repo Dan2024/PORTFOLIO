@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import { useState } from 'react'
-import NavbarMobile from './NavbarMobile'
+import NavbarMobileMenu from '../components/NavbarMobileMenu'
 
 export default function Navbar() {
   const [navStatus, setNavStatus] = useState(false)
@@ -44,7 +44,7 @@ export default function Navbar() {
             className='md:hidden w-7 mr-3'
           />
 
-          {navStatus && <NavbarMobile handleNavStatus={handleNavStatus} />}
+          {navStatus && <NavbarMobileMenu handleNavStatus={handleNavStatus} />}
         </nav>
       </div>
     </>

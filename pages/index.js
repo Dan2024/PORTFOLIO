@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import About from '../components/About'
-import HeroText from '../components/HeroText'
-import MyWork from '../components/MyWork'
-import Navbar from '../components/Navbar'
-import SkillsAndTools from '../components/SkillsAndTools'
-import Contact from '../components/Contact'
+import About from '../page-section-components/About'
+import HeroText from '../page-section-components/HeroText'
+import MyWork from '../page-section-components/MyWork'
+import Navbar from '../page-section-components/Navbar'
+import SkillsAndTools from '../page-section-components/SkillsAndTools'
+import Contact from '../page-section-components/Contact'
 
 export default function Home() {
   return (

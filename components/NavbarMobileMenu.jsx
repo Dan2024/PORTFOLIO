@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-export default function NavbarMobile({ handleNavStatus }) {
+export default function NavbarMobileMenu({ handleNavStatus }) {
   return (
     <div className='h-screen w-[80vw] bg-white top-0 fixed md:hidden'>
       <h2 className='p-4'>

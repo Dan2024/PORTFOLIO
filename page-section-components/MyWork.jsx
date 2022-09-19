@@ -4,7 +4,7 @@ import { useRef, Suspense } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import MyWorkInfoText from './MyWorkInfoText'
+import MyWorkInfoText from '../components/MyWorkInfoText'
 
 const angleToRadians = (angleInDeg) => (Math.PI / 180) * angleInDeg
 
