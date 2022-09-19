@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useState } from 'react'
-import PersonalLinks from '../components/PersonalLinks'
+import PersonalLinks from '../PersonalLinks'
 
 export default function About() {
   const [selectedRadioBtn, setSelectedRadioBtn] = useState('short')

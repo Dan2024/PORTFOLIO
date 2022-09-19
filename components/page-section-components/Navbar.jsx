@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import { useState } from 'react'
-import NavbarMobileMenu from '../components/NavbarMobileMenu'
+import NavbarMobileMenu from '../NavbarMobileMenu'
 
 export default function Navbar() {
   const [navStatus, setNavStatus] = useState(false)
