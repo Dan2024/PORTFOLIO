@@ -11,15 +11,15 @@ export default function MyWorkInfoText({
   liveWebsiteLink,
 }) {
   return (
-    <section className='ml-5'>
+    <section className='mx-3 mb-10 md:mb-0'>
       <h2>{title}</h2>
       <p>{summary}</p>
-      <button>
+      <button className='mx-3'>
         <Link href={pageUrl}>
           <a>More Info</a>
         </Link>
       </button>
-      <div className='mt-10 grid grid-cols-3-col-grid__expand-three'>
+      <div className='mx-3 mt-10 grid grid-cols-3-col-grid__expand-three'>
         <a href={githubProjectLink} target='_blank' rel='noreferrer'>
           <FontAwesomeIcon
             icon={faGithub}

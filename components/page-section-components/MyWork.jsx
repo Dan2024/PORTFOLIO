@@ -150,11 +150,11 @@ export default function MyWork() {
             </Canvas>
           </aside>
 
-          <div className='ml-5'>
+          <div className='mx-3 pb-10 md:mb-0'>
             <h2>Web-Dev Quiz App</h2>
             <p className='text-portfolio-blue italic'>coming soon...</p>
-            <button className='blur-sm'>More Info</button>
-            <div className='mt-10 grid grid-cols-2-col-grid__expand-two blur-sm'>
+            <button className='mx-3 blur-sm'>More Info</button>
+            <div className='mx-3 mt-10 grid grid-cols-2-col-grid__expand-two blur-sm'>
               <FontAwesomeIcon
                 icon={faGithub}
                 className='w-8 h-8 mr-5 text-portfolio-blue'
