@@ -29,15 +29,16 @@ export default function MyWorkInfoText({
           animationDuration={900}
           color='#61a0af'
         >
-          <h2 className='pr-auto'>{title}</h2>
+          <h2>{title}</h2>
           <p ref={ref}>{summary}</p>
         </RoughNotation>
       )}
       {animatedStylingTitle && (
         <>
-          <h2 className='pr-auto'>
+          <h2>
             <RoughNotation
               type='bracket'
+              brackets={['top']}
               strokeWidth={2}
               padding={4}
               show={inView}
