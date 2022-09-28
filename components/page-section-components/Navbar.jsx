@@ -14,7 +14,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className='sticky top-0 w-full shadow-xl z-[100] bg-[#ecf0f3]'>
+      <header className='sticky top-0 w-full shadow-xl z-[100] bg-gray-100'>
         <nav className='max-w-7xl grid grid-cols-nav-layout mx-auto py-5'>
           <h2 className='text-2xl xs:text-3xl'>
             <Link href='/'>Daniel Northcott</Link>

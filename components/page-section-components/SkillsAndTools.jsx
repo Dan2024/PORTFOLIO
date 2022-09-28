@@ -1,17 +1,16 @@
 import {
-  faHtml5,
-  faCss3,
-  faJsSquare,
-  faReact,
-  faNodeJs,
-} from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  PrismaLogo,
-  ExpressLogo,
+  HTMLLogo,
+  CSSLogo,
   TailwindLogo,
-  PostGreSQLLogo,
-} from '../../public/logos/Logos'
+  JSLogo,
+  ReactLogo,
+  NodeLogo,
+  ExpressLogo,
+  PrismaLogo,
+  PostgreSQLLogo,
+  NextLogo,
+  TSLogo,
+} from '../../public/logos/Logos.js'
 
 export default function SkillsAndTools() {
   return (
@@ -30,45 +29,60 @@ export default function SkillsAndTools() {
             <span className='font-bold'>Typescript.</span>
           </p>
 
-          <div className='mx-auto mt-10 grid grid-cols-icons-layout py-10 px-2 text-sm gap-8 child:grid child:place-items-center pb-32'>
+          <div className='mx-auto mt-10 grid grid-cols-icons-layout py-10 px-2 text-sm gap-8 child:grid child:place-items-center pb-32 text-xs'>
             <div>
-              <FontAwesomeIcon icon={faHtml5} className='px-6 h-[64px] ' />
-              HTML
+              <HTMLLogo />
+              <span className='mt-5'>HTML</span>
             </div>
+
             <div>
-              <FontAwesomeIcon icon={faCss3} className='px-6 h-[64px] py-2' />
-              CSS
+              <CSSLogo />
+              <span className='mt-5'>CSS</span>
             </div>
-            <div>
-              <FontAwesomeIcon
-                icon={faJsSquare}
-                className='px-6 h-[64px] py-1'
-              />
-              JAVASCRIPT
-            </div>
-            <div>
-              <FontAwesomeIcon icon={faReact} className='px-6 h-[64px] py-1' />
-              REACT
-            </div>
-            <div>
-              <FontAwesomeIcon icon={faNodeJs} className='px-6 h-[64px] py-1' />
-              NODE.JS
-            </div>
+
             <div>
               <TailwindLogo />
-              TAILWIND
+              <span className='mt-5'>TAILWIND</span>
             </div>
+
+            <div>
+              <JSLogo />
+              <span className='mt-5'>JAVASCRIPT</span>
+            </div>
+
+            {/* <div>
+              <TSLogo />
+              <span className='mt-5'>TYPESCRIPT</span>
+            </div> */}
+
+            <div>
+              <ReactLogo />
+              <span className='mt-5'>REACT.JS</span>
+            </div>
+
+            <div>
+              <NextLogo />
+              <span className='mt-5'> NEXT.JS</span>
+            </div>
+
             <div>
               <ExpressLogo />
-              EXPRESS
+              <span className='mt-5'>EXPRESS.JS</span>
             </div>
+
+            <div>
+              <NodeLogo />
+              <span className='mt-5'>NODE.JS</span>
+            </div>
+
             <div>
               <PrismaLogo />
-              PRISMA
+              <span className='mt-5'>PRISMA</span>
             </div>
+
             <div>
-              <PostGreSQLLogo />
-              POSTGRESQL
+              <PostgreSQLLogo />
+              <span className='mt-5'>POSTGRESQL</span>
             </div>
           </div>
         </div>

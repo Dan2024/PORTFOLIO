@@ -5,6 +5,9 @@ import { useGLTF } from '@react-three/drei'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import MyWorkInfoText from '../MyWorkInfoText'
+import Image from 'next/image'
+import { RoughNotation } from 'react-rough-notation'
+import { useInView } from 'react-intersection-observer'
 
 const angleToRadians = (angleInDeg) => (Math.PI / 180) * angleInDeg
 
@@ -89,10 +92,22 @@ function Scene({
 
 // ------- canvas -------
 export default function MyWork() {
+  const { ref, inView } = useInView()
+
   return (
     <div className='bg-gray-200'>
-      <div className='max-w-7xl mx-auto '>
+      <div className='max-w-7xl mx-auto'>
         <h2 className='pb-10'>My Work</h2>
+
+        <div className='aspect-[1284/516] ml-2 xl:-ml-[50px] h-[50px] md:h-[75px] lg:h-[80px] rounded-t-lg relative overflow-hidden rounded-r-xl place-self-center'>
+          <Image
+            src='/mywork-cta-img.png'
+            alt='3D monitor call to action'
+            layout='fill'
+            objectFit='cover'
+            objectPosition='30% 70%'
+          />
+        </div>
 
         <section className='md:grid grid-cols-2-col-grid__expand-two gap-5'>
           <aside className='w-[300px] h-[200px] xxs:w-[400px] xxs:h-[300px] xs:w-[500px] xs:h-[400px] mx-auto'>
@@ -115,6 +130,7 @@ export default function MyWork() {
             pageUrl={'/codifeyed'}
             githubProjectLink={'https://github.com/Dan2024/CODIFEYED'}
             liveWebsiteLink={'https://codifeyed.vercel.app/'}
+            animatedStylingHeader={true}
           />
 
           <aside className='w-[300px] h-[200px] xxs:w-[400px] xxs:h-[300px] xs:w-[500px] xs:h-[400px] mx-auto'>
@@ -136,6 +152,7 @@ export default function MyWork() {
             }
             pageUrl={'/portfolio'}
             githubProjectLink={'https://github.com/Dan2024/PORTFOLIO'}
+            animatedStylingTitle={true}
           />
 
           <aside className='w-[300px] h-[200px] xxs:w-[400px] xxs:h-[300px] xs:w-[500px] xs:h-[400px] mx-auto blur'>
@@ -152,7 +169,19 @@ export default function MyWork() {
 
           <div className='mx-3 pb-10 md:mb-0'>
             <h2>Web-Dev Quiz App</h2>
-            <p className='text-portfolio-blue italic'>coming soon...</p>
+            <p className='text-portfolio-blue italic' ref={ref}>
+              <RoughNotation
+                type='underline'
+                padding={5}
+                strokeWidth={2}
+                show={inView}
+                animationDelay={700}
+                animationDuration={900}
+                color='#61a0af'
+              >
+                coming soon...
+              </RoughNotation>
+            </p>
             <button className='mx-3 blur-sm'>More Info</button>
             <div className='mx-3 mt-10 grid grid-cols-2-col-grid__expand-two blur-sm'>
               <FontAwesomeIcon

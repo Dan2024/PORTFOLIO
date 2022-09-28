@@ -9,7 +9,7 @@ html {
 @layer base {
   body {
     /* custom values, tracking wide spaces out text */
-    @apply bg-[#ecf0f3] text-rich-black tracking-wide;
+    @apply bg-gray-100 text-rich-black tracking-wide;
     font-family: 'Poppins', sans-serif;
   }
 
